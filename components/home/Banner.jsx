@@ -72,7 +72,7 @@ const Banner = () => {
 
             {/* Informational Cards Section */}
             <div className="bg-white py-16 relative">
-                <div className="container mx-auto px-4 relative z-10">
+                <div className="container mx-auto px-10 relative z-10">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="bg-white shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 group">
                             <div className="h-64 relative overflow-hidden">

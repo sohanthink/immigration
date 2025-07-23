@@ -53,14 +53,13 @@ const Navbar = () => {
                         </div>
                     </Link>
 
-                    {/* Desktop Menu - Center */}
-                    <div className="hidden md:block">
-                        <div className="flex items-center space-x-2">
+                    <div className="hidden md:block ml-20">
+                        <div className="flex items-center justify-center space-x-2">
                             {menuItems.map((item, index) => (
                                 <div key={item.name} className="relative group">
                                     <Link
                                         href={item.href}
-                                        className="relative px-6 py-3 text-gray-600 hover:text-blue-600 font-semibold transition-all duration-300 rounded-xl"
+                                        className={`relative px-6 py-3 font-semibold transition-all duration-300 rounded-xl ${scrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-200'}`}
                                     >
                                         {item.name}
                                         <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
@@ -70,13 +69,10 @@ const Navbar = () => {
                         </div>
                     </div>
 
-                    {/* Button - Right Side */}
                     <div className="hidden md:block">
-                        <button className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group">
-                            <span className="relative z-10">Get Started</span>
-                            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                            <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
-                        </button>
+                        <Link href="/" className="bg-red text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl group">
+                            Get Started
+                        </Link>
                     </div>
 
                     {/* Mobile menu button */}
