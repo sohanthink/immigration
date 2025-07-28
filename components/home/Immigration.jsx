@@ -8,7 +8,7 @@ import Heading from '../Heading'
 
 const Immigration = () => {
     return (
-        <section className='section_padding'>
+        <section className='container mx-auto mt-48'>
             <div className='flex md:flex-row flex-col items-center gap-2 '>
                 <div className='md:w-1/2 w-full'>
                     <Image
