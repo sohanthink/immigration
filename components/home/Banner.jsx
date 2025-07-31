@@ -25,13 +25,13 @@ const Banner = () => {
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <Image src={banner} alt="banner" fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#09161D]/80 via-[#09161D]/40 to-transparent"></div>
         </div>
 
         <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20">
           <div className="flex flex-col items-center space-y-6">
             {/* Vertical "Follow Us" text */}
-            <div className="text-white text-xs font-semibold tracking-wide rotate-90 mb-6">
+            <div className="text-white font-semibold tracking-wide rotate-90 mb-10">
               Follow Us
             </div>
 
@@ -77,15 +77,15 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="relative z-10 flex items-center justify-center h-full">
-          <div className="text-center max-w-5xl mx-auto px-4">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-white mb-8">
-              <span className="block mb-1">Turn your dream</span>
-              <span className="block mb-1">into reality</span>
-              <span className="block">Immigrate to Canada</span>
+        <div className="relative z-10 flex items-center h-full container mx-auto px-2">
+          <div>
+            <h1 className="text-white">
+              Turn your dream <br />
+              into reality <br />
+              Immigrate to Canada
             </h1>
 
-            <button className="bg-white text-black px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg">
+            <button className="bg-white primary-button text-black px-9 mt-12">
               GET CONSULTATION
             </button>
           </div>

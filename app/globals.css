@@ -1,14 +1,24 @@
 @import "tailwindcss";
 
 @theme {
-  --color-red: #df1119;
+  --color-primary: #df1119;
   --color-black: #28241f;
+  --color-dark: #09161d;
   --color-gray: #797979;
+  --color-border: #e7e7e7;
+  --color-success: #69bc45;
+  --spacing-120: 120px;
 }
 
 @layer components {
-  .common_button {
-    @apply bg-[#df1119] text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl;
-    /* Removed 'group' */
+  .primary-button {
+    @apply bg-primary text-white px-14 py-5 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
   }
+}
+
+h1 {
+  @apply text-[82px] font-extrabold;
+}
+h2 {
+  @apply text-5xl font-bold;
 }
