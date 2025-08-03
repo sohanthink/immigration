@@ -5,6 +5,7 @@
   --color-black: #28241f;
   --color-dark: #09161d;
   --color-gray: #797979;
+  --color-yellow: #ffb71c;
   --color-border: #e7e7e7;
   --color-success: #69bc45;
   --spacing-120: 120px;
@@ -12,13 +13,20 @@
 
 @layer components {
   .primary-button {
-    @apply bg-primary text-white px-14 py-5 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+    @apply bg-primary cursor-pointer text-white px-14 py-5 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
   }
 }
 
 h1 {
-  @apply text-[82px] font-extrabold;
+  @apply text-[82px] font-extrabold leading-[95px];
 }
 h2 {
-  @apply text-5xl font-bold;
+  @apply text-5xl font-bold leading-[58px];
+}
+h5 {
+  @apply text-lg font-medium leading-6;
+}
+
+p {
+  @apply text-base leading-[30px];
 }
