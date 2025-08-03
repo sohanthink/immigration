@@ -8,7 +8,12 @@ const Trusted = () => {
   return (
     <section className="relative">
       <div className="absolute inset-0">
-        <Image src={trustedBg} alt="banner" className="object-cover" />
+        <Image
+          src={trustedBg}
+          alt="banner"
+          className="object-cover w-full"
+          quality={100}
+        />
       </div>
       <div className="container mx-auto relative z-10 flex items-center h-full py-120">
         <div className="flex items-center justify-between w-full">
