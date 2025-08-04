@@ -7,6 +7,8 @@ import TeamSection from "@/components/TeamSection";
 import PartnerProgram from "@/components/home/PartnerProgram";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import Testimonials from "@/components/Testimonials";
+import ContactUs from "@/components/ContactUs";
+import NewsAndArticles from "@/components/home/NewsAndArticles";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <PartnerProgram />
       <WhyChooseUs />
       <Testimonials />
+      <ContactUs />
+      <NewsAndArticles />
     </Fragment>
   );
 }
