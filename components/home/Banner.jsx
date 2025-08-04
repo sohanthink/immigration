@@ -17,6 +17,7 @@ import banner from "@/public/home/banner.png";
 import img1 from "@/public/home/img1.png";
 import img2 from "@/public/home/img2.png";
 import img3 from "@/public/home/img3.png";
+import lineIcon from "@/public/line-icon.png";
 import Link from "next/link";
 
 const Banner = () => {
@@ -78,12 +79,18 @@ const Banner = () => {
         </div>
 
         <div className="relative z-10 flex items-center h-full container mx-auto px-2">
-          <div>
+          <div className="relative">
             <h1 className="text-white">
               Turn your dream <br />
               into reality <br />
               Immigrate to Canada
             </h1>
+            <Image
+              src={lineIcon}
+              alt="banner"
+              className="object-cover absolute bottom-20 right-0"
+              quality={100}
+            />
 
             <button className="bg-white primary-button text-black px-9 mt-12">
               GET CONSULTATION
