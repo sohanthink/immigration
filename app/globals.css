@@ -23,7 +23,10 @@ h1 {
 h2 {
   @apply text-5xl font-bold leading-[58px];
 }
-h4{
+h3 {
+  @apply text-[28px] font-bold leading-9;
+}
+h4 {
   @apply text-2xl font-semibold leading-7;
 }
 h5 {

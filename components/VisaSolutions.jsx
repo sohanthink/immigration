@@ -7,7 +7,7 @@ import {
 import { GoArrowRight } from "react-icons/go";
 import { GiNotebook } from "react-icons/gi";
 
-const VisaSolutions = () => {
+const VisaSolutions = ({ about = false }) => {
   const services = [
     {
       icon: <GiNotebook className="w-8 h-8 text-primary" />,
@@ -51,7 +51,10 @@ const VisaSolutions = () => {
 
   return (
     <section className="relative z-20 mx-auto">
-      <div className="bg-white py-120 px-28 container mx-auto">
+      <div
+        className={"bg-white py-120 container mx-auto"}
+        style={{ padding: about === true ? "120px 0" : "120px 96px" }}
+      >
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-16">
             <div className="mb-12">

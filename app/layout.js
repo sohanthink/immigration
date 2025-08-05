@@ -17,9 +17,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={` ${nunito_sans.variable} antialiased`}>
+      <body className={` ${nunito_sans.variable} antialiased `}>
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
