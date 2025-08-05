@@ -55,7 +55,11 @@ export default function Testimonials() {
   return (
     <>
       <HeroSection
-        title={"Real Stories, Real Impact"}
+        title={
+          <>
+            Real Stories, Real <br /> Impact
+          </>
+        }
         breadcrumb={{ homeLabel: "Home", current: "Testimonials" }}
       />
       <section className="container mx-auto px-2 py-120">
