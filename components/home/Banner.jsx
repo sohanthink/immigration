@@ -1,15 +1,5 @@
-"use client";
-
 import React from "react";
-import {
-  FaFacebook,
-  FaTwitter,
-  FaInstagram,
-  FaPinterest,
-  FaGlobe,
-  FaSearch,
-  FaUsers,
-} from "react-icons/fa";
+import { FaGlobe, FaSearch, FaUsers } from "react-icons/fa";
 import { BsArrowDown } from "react-icons/bs";
 import Image from "next/image";
 
@@ -18,7 +8,7 @@ import img1 from "@/public/home/img1.png";
 import img2 from "@/public/home/img2.png";
 import img3 from "@/public/home/img3.png";
 import lineIcon from "@/public/line-icon.png";
-import Link from "next/link";
+import FollowUsSidebar from "../FollowUsSidebar";
 
 const Banner = () => {
   return (
@@ -26,48 +16,10 @@ const Banner = () => {
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <Image src={banner} alt="banner" fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#09161D]/80 via-[#09161D]/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#09161D]/80 to-[#09161D]/40"></div>
         </div>
 
-        <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20">
-          <div className="flex flex-col items-center space-y-6">
-            {/* Vertical "Follow Us" text */}
-            <div className="text-white font-semibold tracking-wide rotate-90 mb-10">
-              Follow Us
-            </div>
-
-            {/* Vertical divider line */}
-            <div className="w-px h-10 bg-white mb-4" />
-
-            {/* Social Media Icons */}
-            <div className="flex flex-col items-center space-y-5">
-              <Link
-                href="#"
-                className="text-white hover:text-red-500 transition-transform duration-300 hover:scale-110"
-              >
-                <FaPinterest className="w-5 h-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-white hover:text-red-500 transition-transform duration-300 hover:scale-110"
-              >
-                <FaInstagram className="w-5 h-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-white hover:text-red-500 transition-transform duration-300 hover:scale-110"
-              >
-                <FaTwitter className="w-5 h-5" />
-              </Link>
-              <Link
-                href="#"
-                className="text-white hover:text-red-500 transition-transform duration-300 hover:scale-110"
-              >
-                <FaFacebook className="w-5 h-5" />
-              </Link>
-            </div>
-          </div>
-        </div>
+        <FollowUsSidebar />
 
         <div className="absolute right-4 bottom-20 z-20">
           <div className="flex flex-col items-center justify-center">

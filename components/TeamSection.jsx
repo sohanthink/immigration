@@ -8,7 +8,7 @@ import image2 from "../public/home/team/image2.webp";
 import image3 from "../public/home/team/image3.webp";
 import image4 from "../public/home/team/image4.webp";
 
-const TeamSection = () => {
+const TeamSection = ({ about = false }) => {
   const teamMembers = [
     {
       name: "John Markwood",
@@ -33,16 +33,28 @@ const TeamSection = () => {
   ];
 
   return (
-    <div className="bg-white pb-120 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
+    <div
+      className="bg-white pb-120 px-4 sm:px-6 lg:px-8"
+      style={{ paddingTop: about ? "120px" : "0px" }}
+    >
+      <div className="container mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-16">
-          <p className="text-red-500  uppercase mb-6">MEET OUR EXPERT</p>
-          <h2 className="text-black">
-            The Team Behind Your
-            <br />
-            Success
-          </h2>
+        <div
+          className={`${
+            about ? "flex justify-between items-end" : "text-center"
+          } mb-16`}
+        >
+          <div>
+            <p className="text-red-500  uppercase mb-6">MEET OUR EXPERT</p>
+            <h2 className="text-black">
+              The Team Behind Your
+              <br />
+              Success
+            </h2>
+          </div>
+          {about && (
+            <button className="primary-button">View All Members</button>
+          )}
         </div>
 
         {/* Team Grid */}

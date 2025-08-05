@@ -8,37 +8,20 @@ import Image from "next/image";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const isScrolled = window.scrollY > 20;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const menuItems = [
-    { name: "Home", href: "/#home" },
-    { name: "Services", href: "/#services" },
-    { name: "About", href: "/#about" },
-    { name: "Contact", href: "/#contact" },
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
-    <nav
-      className={`fixed w-full top-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-dark backdrop-blur-lg shadow-xl border-b border-gray-200/30"
-          : "bg-transparent"
-      }`}
-    >
+    <nav className="sticky w-full top-0 z-50 duration-50 bg-dark">
       <div className="container mx-auto px-2">
         <div className="flex justify-between items-center h-20">
           {/* Logo - Left Side */}
@@ -62,14 +45,9 @@ const Navbar = () => {
                 <div key={item.name} className="relative group">
                   <Link
                     href={item.href}
-                    className={`relative px-6 py-3 font-semibold transition-all duration-300 rounded-xl ${
-                      scrolled
-                        ? "text-white hover:text-blue-600"
-                        : "text-white hover:text-blue-200"
-                    }`}
+                    className="relative px-6 py-3 font-semibold text-sm text-white"
                   >
                     {item.name}
-                    <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
                   </Link>
                 </div>
               ))}
