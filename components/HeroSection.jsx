@@ -12,7 +12,7 @@ const HeroSection = ({
   breadcrumb = { homeLabel: "Home", current: title },
 }) => {
   return (
-    <div className="relative min-h-[60vh] flex items-center justify-center text-white overflow-hidden">
+    <section className="relative min-h-[60vh] flex items-center justify-center text-white overflow-hidden">
       {/* Background Image */}
       <Image
         src={backgroundImage}
@@ -47,7 +47,7 @@ const HeroSection = ({
           <span>{breadcrumb.current}</span>
         </h5>
       </div>
-    </div>
+    </section>
   );
 };
 

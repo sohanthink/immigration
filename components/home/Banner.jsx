@@ -12,7 +12,7 @@ import FollowUsSidebar from "../FollowUsSidebar";
 
 const Banner = () => {
   return (
-    <div className="relative min-h-screen">
+    <section className="relative min-h-screen">
       <div className="relative h-screen">
         <div className="absolute inset-0">
           <Image src={banner} alt="banner" fill className="object-cover" />
@@ -21,7 +21,7 @@ const Banner = () => {
 
         <FollowUsSidebar />
 
-        <div className="absolute right-4 bottom-20 z-20">
+        <div className="absolute right-4 bottom-40 z-20">
           <div className="flex flex-col items-center justify-center">
             <BsArrowDown className="text-white text-2xl animate-bounce" />
             <div className="text-white text-sm tracking-wider rotate-90 mt-12">
@@ -116,7 +116,7 @@ const Banner = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

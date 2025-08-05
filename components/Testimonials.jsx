@@ -13,11 +13,9 @@ import logo4 from "@/public/testimonials/logo/avatar4.png";
 import logo5 from "@/public/testimonials/logo/avatar5.png";
 import logo6 from "@/public/testimonials/logo/avatar6.png";
 
-import { FcGoogle } from "react-icons/fc";
-import quoteIcon from "@/public/testimonials/quote.png";
 import logosBg from "@/public/testimonials/testimonials-bg.webp";
 import Link from "next/link";
-import { VerifiedIcon } from "@/public/icon";
+import ReviewCard from "./ReviewCard";
 
 const testimonials = [
   {
@@ -78,58 +76,23 @@ const Testimonials = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
           {testimonials.map((t, i) => (
             <div key={i}>
-              <div className="bg-white p-10 rounded-lg relative">
-                {/* Quote icon */}
-                <Image
-                  src={quoteIcon}
-                  alt="quote"
-                  width={28}
-                  height={28}
-                  className="absolute -top-10 left-5 bg-white p-2 w-16 h-16"
-                />
-
-                {/* Testimonial content */}
-                <p className="text-gray mb-4 mt-4">
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by inject.
-                </p>
-
-                {/* Rating and logo */}
-                <div className="flex items-center justify-between">
-                  <div className="text-yellow flex items-center gap-2">
-                    ★★★★★{" "}
-                    <span>
-                      <VerifiedIcon />
-                    </span>
-                  </div>
-                  <FcGoogle />
-                </div>
-
-                {/* Author */}
-              </div>
-              <div className="flex items-center gap-4 mt-7">
-                <Image
-                  src={t.avatar}
-                  alt={t.name}
-                  width={40}
-                  height={40}
-                  className="rounded-full"
-                />
-                <div>
-                  <p className="font-semibold text-black">{t.name}</p>
-                  <p className="text-sm text-gray">{t.date}</p>
-                </div>
-              </div>
+              <ReviewCard
+                date={t.date}
+                name={t.name}
+                avatar={t.avatar}
+                description={
+                  "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by inject."
+                }
+              />
             </div>
           ))}
         </div>
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <button className="primary-button border border-primary text-primary bg-transparent hover:bg-red-500 hover:text-white transition-all duration-300">
+          <Link href="/testimonials" className="primary-button border border-primary text-primary bg-transparent hover:bg-red-500 hover:text-white transition-all duration-300">
             View All Reviews
-          </button>
+          </Link>
         </div>
 
         {/* Logos */}
