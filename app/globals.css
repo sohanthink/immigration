@@ -13,7 +13,7 @@
 
 @layer components {
   .primary-button {
-    @apply bg-primary cursor-pointer text-white px-14 py-5 font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-xl;
+    @apply bg-primary cursor-pointer text-white px-14 py-5 font-medium transition-all duration-300 transform hover:bg-primary/95 hover:shadow-xl;
   }
 }
 
