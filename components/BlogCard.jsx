@@ -1,14 +1,15 @@
 import Image from "next/image";
+import { BiTime } from "react-icons/bi";
 import { FaRegComments } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
 
-const BlogCard = ({ image, date, author, comments, title }) => {
+const BlogCard = ({ image, date, author, comments, title, eventTime, key }) => {
   return (
-    <div className="relative group cursor-pointer">
+    <div key={key} className="relative group cursor-pointer">
       <Image
         src={image}
         alt={title}
-       
+        quality={100}
         className="w-full h-full object-cover"
       />
       <div className="absolute group-hover:opacity-0 inset-0 bg-gradient-to-t from-black  to-transparent z-10 transition duration-300 "></div>
@@ -22,15 +23,25 @@ const BlogCard = ({ image, date, author, comments, title }) => {
 
         <div className="group-hover:bg-white p-6 group-hover:pt-16">
           <p className="text-white flex items-center gap-5">
-            <span className="text-primary flex items-center gap-2 ">
-              {" "}
-              <FaRegCircleUser />{" "}
-              <span className="group-hover:text-black">{author}</span>
-            </span>{" "}
-            <span className="flex items-center gap-2 group-hover:text-black">
-              {" "}
-              <FaRegComments className="text-primary" /> {comments} Comment
-            </span>
+            {author && (
+              <span className="text-primary flex items-center gap-2 ">
+                {" "}
+                <FaRegCircleUser />{" "}
+                <span className="group-hover:text-black">{author}</span>
+              </span>
+            )}{" "}
+            {comments && (
+              <span className="flex items-center gap-2 group-hover:text-black">
+                {" "}
+                <FaRegComments className="text-primary" /> {comments} Comment
+              </span>
+            )}
+            {eventTime && (
+              <span className="flex items-center gap-2 group-hover:text-black">
+                {" "}
+                <BiTime className="text-primary" /> {eventTime}
+              </span>
+            )}
           </p>
           <h4 className="text-white font-semibold group-hover:text-black">
             {title}

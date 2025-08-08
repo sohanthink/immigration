@@ -14,10 +14,30 @@ const Navbar = () => {
   };
 
   const menuItems = [
-    { name: "Home", href: "/" },
-    { name: "Services", href: "/services" },
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
+    { name: "HOME", href: "/" },
+    {
+      name: "PAGES",
+      href: "#",
+      submenu: [
+        { name: "About Us", href: "/about" },
+        { name: "Our Team", href: "/teams" },
+        { name: "Contact Us", href: "/contact" },
+        { name: "Testimonials", href: "/testimonials" },
+        { name: "Blog", href: "/blogs" },
+        { name: "Careers", href: "/careers" },
+        { name: "Our Events", href: "/events" },
+      ],
+    },
+    {
+      name: "SERVICES",
+      href: "#",
+      submenu: [
+        { name: "Service 1", href: "/service1" },
+        { name: "Service 2", href: "/service2" },
+        { name: "Service 3", href: "/service3" },
+      ],
+    },
+    { name: "BLOG", href: "/blog" },
   ];
 
   return (
@@ -39,19 +59,38 @@ const Navbar = () => {
             </div>
           </Link>
 
-          <div className="hidden md:block ml-20">
-            <div className="flex items-center justify-center space-x-2">
-              {menuItems.map((item, index) => (
-                <div key={item.name} className="relative group">
-                  <Link
-                    href={item.href}
-                    className="relative px-6 py-3 font-semibold text-sm text-white"
-                  >
-                    {item.name}
-                  </Link>
-                </div>
-              ))}
-            </div>
+          {/* Desktop Menu */}
+          <div className="hidden md:flex ml-20 space-x-6">
+            {menuItems.map((item) => (
+              <div key={item.name} className="relative group">
+                <Link
+                  href={item.href}
+                  className="px-4 py-3 font-semibold text-sm text-white flex items-center gap-1"
+                >
+                  {item.name}
+                  {item.submenu && <FaChevronDown className="text-xs" />}
+                </Link>
+
+                {/* Dropdown */}
+                {item.submenu && (
+                  <div className="absolute left-3 top-10 mt-1 w-48 bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300">
+                    <ul className="py-2">
+                      {item.submenu.map((sub) => (
+                        <li key={sub.name}>
+                          <Link
+                            href={sub.href}
+                            className="group/submenu block px-4 py-2 text-sm text-gray-800 hover:text-primary hover:bg-gray-50 relative"
+                          >
+                            {sub.name}
+                            <span className="absolute left-4 bottom-0 w-5 h-[1px] bg-primary opacity-0 group-hover/submenu:w-4/5 group-hover:opacity-100 transition-all duration-700"></span>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
 
           <div className="hidden md:block">

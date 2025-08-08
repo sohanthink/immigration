@@ -10,6 +10,7 @@ import FollowUsSidebar from "./FollowUsSidebar";
 const HeroSection = ({
   title,
   breadcrumb = { homeLabel: "Home", current: title },
+  subtitle,
 }) => {
   return (
     <section className="relative min-h-[60vh] flex items-center justify-center text-white overflow-hidden">
@@ -28,21 +29,28 @@ const HeroSection = ({
       <div className="absolute inset-0 bg-gradient-to-l from-[#09161D] to-[#09161D]/80 z-10" />
 
       {/* Content */}
-      <div className="relative z-20 text-center px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">{title}</h1>
-        <h5 className="flex justify-center items-center gap-2 mt-24 relative">
+      <div className="relative z-20 text-center px-2">
+        <div className={`${subtitle ? "mb-10" : "mb-24"}`}>
+          <h1 className="max-w-7xl mx-auto">{title}</h1>
+          {subtitle && <p className="max-w-4xl mx-auto mt-7">{subtitle}</p>}
+        </div>
+
+        <h5 className="flex justify-center items-center gap-2 relative">
           <Link href="/" className="text-primary flex items-center gap-2">
             <span>
               <HiOutlineHome className="w-7 h-7" />
             </span>{" "}
             {breadcrumb.homeLabel}
           </Link>
-          <Image
-            src={lineIcon}
-            alt="banner"
-            className="object-cover absolute bottom-16 right-8"
-            quality={100}
-          />
+          {!subtitle && (
+            <Image
+              src={lineIcon}
+              alt="banner"
+              className="object-cover absolute bottom-20 right-8"
+              quality={100}
+            />
+          )}
+
           <span className="text-white">/</span>
           <span>{breadcrumb.current}</span>
         </h5>
