@@ -55,8 +55,8 @@ const Banner = () => {
       <div className="bg-white py-16 relative">
         <div className="container mx-auto px-10 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 absolute -top-1/2 -translate-y-1/2 left-0 right-0">
-            <div className="bg-white shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 group">
-              <div className="h-64 relative overflow-hidden">
+            <div className="bg-white relative group">
+              <div className="h-72">
                 <Image
                   src={img1}
                   alt="Immigration Applicant"
@@ -64,19 +64,17 @@ const Banner = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="bg-red-600 p-4 flex items-center justify-between">
-                <h3 className="text-white font-semibold text-lg">
-                  Immigration Applicant
-                </h3>
-                <div className="w-10 h-10 bg-white/20 rounded flex items-center justify-center">
-                  <FaGlobe className="text-white w-5 h-5" />
+              <div className="bg-black flex items-center absolute -bottom-10 transform group-hover:bg-primary hover:text-white z-10 w-4/5 transition-all duration-300 ">
+                <div className="p-6 bg-primary flex items-center justify-center">
+                  <FaGlobe className="text-white w-7 h-7" />
                 </div>
+                <h5 className="text-white p-6">Immigration Applicant</h5>
               </div>
             </div>
 
             {/* Card 2 - Immigration Professional */}
-            <div className="bg-white shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 group">
-              <div className="h-64 relative overflow-hidden">
+            <div className="bg-white relative group">
+              <div className="h-72">
                 <Image
                   src={img2}
                   alt="Immigration Professional"
@@ -84,19 +82,17 @@ const Banner = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="bg-red-600 p-4 flex items-center justify-between">
-                <h3 className="text-white font-semibold text-lg">
-                  Immigration Professional
-                </h3>
-                <div className="w-10 h-10 bg-white/20 rounded flex items-center justify-center">
-                  <FaSearch className="text-white w-5 h-5" />
+              <div className="bg-black flex items-center absolute -bottom-10 transform group-hover:bg-primary hover:text-white z-10 w-4/5 transition-all duration-300 ">
+                <div className="p-6 bg-primary flex items-center justify-center">
+                  <FaSearch className="text-white w-7 h-7" />
                 </div>
+                <h5 className="text-white p-6">Immigration Professional</h5>
               </div>
             </div>
 
             {/* Card 3 - Small Business Advisor */}
-            <div className="bg-white shadow-lg overflow-hidden transform hover:scale-105 transition-all duration-300 group">
-              <div className="h-64 relative overflow-hidden">
+            <div className="bg-white relative group">
+              <div className="h-72">
                 <Image
                   src={img3}
                   alt="Small Business Advisor"
@@ -104,13 +100,11 @@ const Banner = () => {
                   className="object-cover"
                 />
               </div>
-              <div className="bg-red-600 p-4 flex items-center justify-between">
-                <h3 className="text-white font-semibold text-lg">
-                  Small Business Advisor
-                </h3>
-                <div className="w-10 h-10 bg-white/20 rounded flex items-center justify-center">
-                  <FaUsers className="text-white w-5 h-5" />
+              <div className="bg-black flex items-center absolute -bottom-10 transform group-hover:bg-primary hover:text-white z-10 w-4/5 transition-all duration-300 ">
+                <div className="p-6 bg-primary flex items-center justify-center">
+                  <FaUsers className="text-white w-7 h-7" />
                 </div>
+                <h5 className="text-white p-6">Small Business Advisor</h5>
               </div>
             </div>
           </div>
