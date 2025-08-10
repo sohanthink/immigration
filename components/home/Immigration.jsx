@@ -7,7 +7,7 @@ import icon2 from "@/public/home/immigration/icon2.png";
 
 const Immigration = () => {
   return (
-    <section className="container mx-auto mt-48 pb-120">
+    <section className="container mx-auto xl:mt-48 xl:pb-120 py-16 px-2">
       <div className="flex md:flex-row flex-col items-center gap-2 ">
         <div className="md:w-1/2 w-full">
           <Image

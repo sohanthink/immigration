@@ -52,21 +52,18 @@ const VisaSolutions = ({ about = false }) => {
   return (
     <section className="relative z-20 mx-auto">
       <div
-        className={"bg-white py-120 container mx-auto"}
-        style={{ padding: about === true ? "120px 0" : "120px 96px" }}
+        className={`bg-white container mx-auto ${
+          about ? "xl:py-120 py-16 px-0" : "xl:py-120 py-16 xl:px-24 px-2"
+        }`}
       >
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-7 gap-y-16">
-            <div className="mb-12">
-              <p className="text-primary text-sm font-semibold uppercase tracking-wide mb-2">
+            <div className="xl:mb-12 max-md:text-center">
+              <p className="text-primary uppercase tracking-wide mb-2">
                 IMMIGRATION SERVICES
               </p>
               <h2 className="font-bold text-black">
-                Our Canada
-                <br />
-                Immigration Visa
-                <br />
-                Solutions
+                Our Canada Immigration Visa Solutions
               </h2>
             </div>
             {services.map((service, index) => (

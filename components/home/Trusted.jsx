@@ -11,26 +11,26 @@ const Trusted = () => {
         <Image
           src={trustedBg}
           alt="banner"
-          className="object-cover w-full"
+          className="object-cover w-full max-lg:h-full"
           quality={100}
         />
       </div>
-      <div className="container mx-auto relative z-10 flex items-center h-full py-120">
+      <div className="container mx-auto px-2 relative z-10 flex items-center h-full xl:py-120 py-16">
         <div className="flex items-center justify-between w-full">
-          <div className="w-1/2">
+          <div className="xl:w-1/2">
             <h2 className="text-white">
               We are trusted Immigration & Visa solution agency
             </h2>
           </div>
-          <div className="flex items-center justify-center w-1/2 gap-5">
-            <div className="p-9 bg-white border border-primary rounded-full h-24 w-24 flex items-center justify-center  hover:scale-105 transition-transform duration-300 cursor-pointer">
-              <FaPlay className="text-4xl" />
+          <div className="flex items-center justify-center xl:w-1/2 gap-5">
+            <div className="xl:p-9 md:p-6 p-4 bg-white border border-primary rounded-full xl:h-24 xl:w-24 md:h-16 md:w-16 w-10 h-10 flex items-center justify-center hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <FaPlay className="xl:text-4xl md:text-xl" />
             </div>
-            <div>
+            <div className="flex flex-col items-center justify-center">
               <Image
                 src={VideoArrowIcon}
                 alt="Video Thumbnail"
-                className="object-cover"
+                className="object-cover max-md:w-8"
               />
               <p className="text-white mt-3">Play Video</p>
             </div>

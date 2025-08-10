@@ -9,12 +9,12 @@ import globe from "@/public/dot-globe.png";
 const Footer = () => {
   return (
     <footer className="bg-[#0a1b23] text-white pt-120 pb-7 px-4 md:px-10">
-      <div className="container mx-auto grid md:grid-cols-4 gap-40">
+      <div className="container mx-auto px-2 grid xl:grid-cols-4 2xl:gap-40 xl:gap-20 gap-10">
         {/* Logo & Input */}
         <div>
           <Image src={logo} alt={"logo"} className="w-14 h-fit" />
           <p className="">We're always here for you.</p>
-          <div className="relative mt-16">
+          <div className="relative xl:mt-16 mt-8">
             <Image
               src={globe}
               alt={"logo"}
@@ -30,7 +30,7 @@ const Footer = () => {
                 type="submit"
                 className="bg-primary text-white py-3 px-6 flex items-center gap-2 cursor-pointer"
               >
-                Send <LuMoveUpRight className="text-sm"/>
+                Send <LuMoveUpRight className="text-sm" />
               </button>
             </form>
           </div>
@@ -39,19 +39,19 @@ const Footer = () => {
         <div className="md:col-span-3 grid md:grid-cols-1">
           {/* Description */}
           <div className="md:col-span-1">
-            <h4>
-              YES! IMMIGRATION is a professional Canadian <br /> immigration &
+            <h4 className="max-w-[553px]">
+              YES! IMMIGRATION is a professional Canadian immigration &
               settlement firm
             </h4>
           </div>
 
-          <div className="flex justify-between mt-20">
+          <div className="flex justify-between flex-wrap xl:mt-20 mt-12">
             {" "}
             {/* Contact Info */}
             <div>
               <h5 className="text-primary mb-6">Contact Us</h5>
               <p className="text-sm">immigration@example.com</p>
-              <p className="text-sm mt-1 mb-24">+1 234 5644 5698</p>
+              <p className="text-sm mt-1 xl:mb-24 mb-5">+1 234 5644 5698</p>
 
               <Link href="#" className="text-gray">
                 Terms and Condition
@@ -61,7 +61,7 @@ const Footer = () => {
             <div>
               <h5 className="text-primary mb-6">Our Address</h5>
               <p className="text-sm">Old Wesbury 356, New York</p>
-              <p className="text-sm mt-1 mb-24">11230, United States</p>
+              <p className="text-sm mt-1 xl:mb-24 mb-5">11230, United States</p>
 
               <Link href="#" className="text-gray">
                 Privacy Policy
@@ -95,7 +95,7 @@ const Footer = () => {
       </div>
 
       {/* Bottom Line */}
-      <div className="mt-24 border-t border-[#2F2F2F] pt-6 text-center text-sm text-gray">
+      <div className="xl:mt-24 mt-16 border-t border-[#2F2F2F] pt-6 text-center text-sm text-gray">
         <p>© 2024 Theme Mascot, All Rights Reserved</p>
       </div>
     </footer>

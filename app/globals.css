@@ -13,26 +13,30 @@
 
 @layer components {
   .primary-button {
-    @apply bg-primary cursor-pointer text-white px-14 py-5 font-medium transition-all duration-300 transform hover:bg-primary/95 hover:shadow-xl;
+    @apply bg-primary cursor-pointer text-white px-8 py-3 font-medium transition-all duration-300 transform hover:bg-primary/95 hover:shadow-xl active:scale-95 text-sm sm:px-10 sm:py-4 sm:text-base lg:px-14 lg:py-5;
   }
 }
 
 h1 {
-  @apply text-[82px] font-extrabold leading-[95px];
+  @apply text-[36px] font-extrabold leading-[44px] sm:text-[48px] sm:leading-[56px] lg:text-[82px] lg:leading-[95px];
 }
+
 h2 {
-  @apply text-5xl font-bold leading-[58px];
+  @apply text-2xl font-bold leading-[32px] sm:text-4xl sm:leading-[44px] lg:text-5xl lg:leading-[58px];
 }
+
 h3 {
-  @apply text-[28px] font-bold leading-9;
+  @apply text-xl font-bold leading-[28px] sm:text-2xl sm:leading-[32px] lg:text-[28px] lg:leading-9;
 }
+
 h4 {
-  @apply text-2xl font-semibold leading-7;
+  @apply text-lg font-semibold leading-6 sm:text-xl sm:leading-7 lg:text-2xl lg:leading-7;
 }
+
 h5 {
-  @apply text-lg font-medium leading-6;
+  @apply text-base font-medium leading-6 sm:text-lg lg:leading-6;
 }
 
 p {
-  @apply text-base leading-[30px];
+  @apply text-sm leading-[24px] sm:text-base sm:leading-[28px] lg:leading-[30px];
 }

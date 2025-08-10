@@ -48,7 +48,7 @@ const Testimonials = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4">
+      <div className="relative z-10 container mx-auto px-2 max-lg:text-center">
         {/* Header */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-20">
           <div>
@@ -73,7 +73,7 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 xl:gap-6 max-md:gap-16 gap-6 mb-10">
           {testimonials.map((t, i) => (
             <div key={i}>
               <ReviewCard
@@ -90,13 +90,16 @@ const Testimonials = () => {
 
         {/* CTA Button */}
         <div className="flex justify-center">
-          <Link href="/testimonials" className="primary-button border border-primary text-primary bg-transparent hover:bg-red-500 hover:text-white transition-all duration-300">
+          <Link
+            href="/testimonials"
+            className="primary-button border border-primary text-primary bg-transparent hover:bg-red-500 hover:text-white transition-all duration-300"
+          >
             View All Reviews
           </Link>
         </div>
 
         {/* Logos */}
-        <div className="mt-24 flex items-center justify-between gap-6">
+        <div className="xl:mt-24 mt-16 flex items-center justify-between max-sm:grid max-sm:grid-cols-3 gap-6">
           {/* Replace these spans with actual Image logos */}
 
           <Image src={logo1} alt={"logo"} />

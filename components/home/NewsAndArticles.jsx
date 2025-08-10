@@ -7,20 +7,19 @@ import Image from "next/image";
 
 const NewsAndArticles = () => {
   return (
-    <section className="py-20 bg-white relative">
+    <section className="xl:py-20 py-16 bg-white relative">
       <div className="" />
       <Image
         src={bgShape}
         alt={"bg image"}
-       
         quality={100}
-        className="object-cover absolute inset-0 bg-[#f8f5f3] clip-custom-shape z-0 w-full"
+        className="object-cover absolute inset-0 bg-[#f8f5f3] clip-custom-shape z-0 w-full max-lg:hidden"
       />
       <div className="relative z-10 container mx-auto px-2">
         <p className="uppercase text-primary text-center">News & Articles</p>
         <h2 className="mt-6 text-center">Latest from the blog</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 xl:my-16 my-10">
           <BlogCard
             image={blog1}
             date="31 Jan"
