@@ -13,7 +13,7 @@ const HeroSection = ({
   subtitle,
 }) => {
   return (
-    <section className="relative min-h-[60vh] flex items-center justify-center text-white overflow-hidden">
+    <section className="relative xl:min-h-[60vh] lg:min-h-[50vh] min-h-[40vh] flex items-center justify-center text-white overflow-hidden">
       {/* Background Image */}
       <Image
         src={backgroundImage}
@@ -29,7 +29,7 @@ const HeroSection = ({
       <div className="absolute inset-0 bg-gradient-to-l from-[#09161D] to-[#09161D]/80 z-10" />
 
       {/* Content */}
-      <div className="relative z-20 text-center px-2">
+      <div className="relative z-20 text-center px-4">
         <div className={`${subtitle ? "mb-10" : "mb-24"}`}>
           <h1 className="max-w-7xl mx-auto">{title}</h1>
           {subtitle && <p className="max-w-4xl mx-auto mt-7">{subtitle}</p>}
@@ -46,7 +46,7 @@ const HeroSection = ({
             <Image
               src={lineIcon}
               alt="banner"
-              className="object-cover absolute bottom-20 right-8"
+              className="object-cover absolute bottom-20 right-8 hidden lg:block"
               quality={100}
             />
           )}
