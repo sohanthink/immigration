@@ -32,8 +32,9 @@ const TeamSection = ({ about = false }) => {
 
   return (
     <section
-      className="bg-white pb-120 px-4 sm:px-6 lg:px-8"
-      style={{ paddingTop: about ? "120px" : "0px" }}
+      className={`bg-white px-4 sm:px-6 lg:px-8 ${
+        about ? "py-120" : "pt-0 pb-120"
+      }`}
     >
       <div className="container mx-auto">
         {/* Header Section */}

@@ -8,7 +8,7 @@ const ReviewCard = ({ avatar, name, date, description }) => {
   return (
     <div className="flex flex-col justify-between h-full">
       <div className="relative h-full">
-        <div className="bg-white border h-full border-[#EFEFEF] p-10 rounded-lg relative z-10">
+        <div className="bg-white border h-full border-[#EFEFEF] xl:p-10 md:p-6 p-4 rounded-lg relative z-10">
           {/* Quote icon */}
           <Image
             src={quoteIcon}

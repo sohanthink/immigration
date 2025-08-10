@@ -9,7 +9,7 @@ import {
 
 const FollowUsSidebar = () => {
   return (
-    <div className="absolute left-4 top-1/2 -translate-y-1/2 z-20">
+    <div className="absolute 2xl:left-4 left-1 top-1/2 -translate-y-1/2 z-20 hidden xl:block">
       <div className="flex flex-col items-center space-y-6">
         {/* Vertical "Follow Us" text */}
         <div className="text-white font-semibold tracking-wide rotate-90 mb-10">

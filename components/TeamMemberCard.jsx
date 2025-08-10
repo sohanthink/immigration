@@ -25,9 +25,7 @@ const TeamMemberCard = ({ member }) => {
         <div className="flex items-center justify-between bg-white w-[90%] relative">
           <div className="absolute bottom-1/2 translate-y-1/2 left-0 w-2 h-8 bg-red-500"></div>
           <div className="p-4">
-            <h3 className="text-lg font-semibold text-black mb-1">
-              {member.name}
-            </h3>
+            <h5 className="text-black mb-1">{member.name}</h5>
             <p className="text-sm text-gray">{member.role}</p>
           </div>
 

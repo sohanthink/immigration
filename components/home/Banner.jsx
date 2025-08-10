@@ -12,16 +12,21 @@ import FollowUsSidebar from "../FollowUsSidebar";
 
 const Banner = () => {
   return (
-    <section className="relative min-h-screen">
-      <div className="relative h-screen">
+    <section className="relative lg:min-h-screen min-h-[60vh]">
+      <div className="relative lg:h-screen h-[60vh]">
         <div className="absolute inset-0">
-          <Image src={banner} alt="banner" fill className="object-cover" />
+          <Image
+            src={banner}
+            alt="banner"
+            fill
+            className="object-cover bg-center"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-[#09161D]/80 to-[#09161D]/40"></div>
         </div>
 
         <FollowUsSidebar />
 
-        <div className="absolute right-4 bottom-40 z-20">
+        <div className="absolute right-4 bottom-40 z-20 hidden xl:block">
           <div className="flex flex-col items-center justify-center">
             <BsArrowDown className="text-white text-2xl animate-bounce" />
             <div className="text-white text-sm tracking-wider rotate-90 mt-12">
@@ -30,17 +35,15 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="relative z-10 flex items-center h-full container mx-auto px-2">
+        <div className="relative z-10 flex items-center h-full container mx-auto px-2 xl:px-10 2xl:px-2">
           <div className="relative">
-            <h1 className="text-white">
-              Turn your dream <br />
-              into reality <br />
-              Immigrate to Canada
+            <h1 className="text-white max-w-[850px]">
+              Turn your dream into reality Immigrate to Canada
             </h1>
             <Image
               src={lineIcon}
               alt="banner"
-              className="object-cover absolute bottom-20 right-0"
+              className="object-cover absolute xl:bottom-20 right-0 hidden lg:block"
               quality={100}
             />
 
@@ -53,8 +56,8 @@ const Banner = () => {
 
       {/* Informational Cards Section */}
       <div className="bg-white py-16 relative">
-        <div className="container mx-auto px-10 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 absolute -top-1/2 -translate-y-1/2 left-0 right-0">
+        <div className="container mx-auto xl:px-10 px-2 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 md:gap-4 xl:gap-8 gap-20 xl:absolute -top-1/2 xl:-translate-y-1/2 left-0 right-0">
             <div className="bg-white relative group">
               <div className="h-72">
                 <Image

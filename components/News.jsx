@@ -11,7 +11,7 @@ const News = ({ title, blogData }) => {
         src={bgShape}
         alt={"bg image"}
         quality={100}
-        className=" absolute h-full inset-0 bg-[#f8f5f3] clip-custom-shape z-0 w-full"
+        className="absolute h-full inset-0 bg-[#f8f5f3] z-0 w-full"
       />
       <div className="relative z-10 container mx-auto px-2">
         <div className="flex items-center justify-between">

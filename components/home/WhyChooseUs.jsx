@@ -7,7 +7,7 @@ import mapBg from "@/public/home/world-map-bg.webp";
 
 const WhyChooseUs = () => {
   return (
-    <section className="relative bg-white py-20 overflow-hidden text-black">
+    <section className="relative bg-white xl:py-120 py-16 overflow-hidden text-black">
       {/* Faint world map background */}
       <div className="absolute inset-0 z-0 container mx-auto">
         <Image
@@ -21,17 +21,15 @@ const WhyChooseUs = () => {
 
       <div className="relative z-10 container mx-auto px-2 grid lg:grid-cols-2 gap-12 mb-20">
         {/* Left section */}
-        <div>
-          <p className="text-sm text-primary font-semibold uppercase mb-6">
-            Why Choose Us?
-          </p>
+        <div className="max-lg:text-center">
+          <p className="text-primary uppercase mb-6">Why Choose Us?</p>
           <h2>
             Continuously{" "}
             <span className="inline-flex items-center gap-2">
               <Image src={globeBlue} alt="blue globe" width={48} height={48} />
               generating
             </span>{" "}
-            innovative ideas and <br /> enhancing current <br />
+            innovative ideas and enhancing current
             <span className="inline-flex items-center gap-2">
               consulting
               <Image src={globeRed} alt="red globe" width={48} height={48} />
@@ -41,7 +39,7 @@ const WhyChooseUs = () => {
         </div>
 
         {/* Right section */}
-        <div>
+        <div className="max-lg:text-center">
           <p className="mb-5 text-gray">
             We’re not just a team—we’re a close-knit community united by a
             single mission: empowering international entrepreneurs and
@@ -59,20 +57,20 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Stats section */}
-      <div className="relative z-10 container mx-auto px-2 flex items-center justify-between">
-        <div className="border-l border-gray pl-9">
+      <div className="relative z-10 container mx-auto px-2 xl:flex items-center justify-between max-lg:text-center">
+        <div className="xl:border-l border-gray xl:pl-9">
           <h2>40 000+</h2>
           <p className="text-gray mt-3">Business Plans</p>
         </div>
-        <div className="border-l border-gray pl-9">
+        <div className="xl:border-l border-gray xl:pl-9">
           <h2>75+</h2>
           <p className="text-gray mt-3">Client Countries</p>
         </div>
-        <div className="border-l border-gray pl-9">
+        <div className="xl:border-l border-gray xl:pl-9">
           <h2>220+</h2>
           <p className="text-gray mt-3">Industries</p>
         </div>
-        <div className="border-l border-gray pl-9">
+        <div className="xl:border-l border-gray xl:pl-9">
           <h2>$300M+</h2>
           <p className="text-gray mt-3">Funding for Clients</p>
         </div>
