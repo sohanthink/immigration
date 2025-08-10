@@ -46,20 +46,20 @@ const OurOffice = () => {
             className="w-full h-auto object-cover"
             quality={100}
           />
-          <span className="absolute top-[30%] left-[22%]">
-            <FaLocationDot className="text-gray text-2xl" />
+          <span className="absolute top-[30%] left-[22%] max-sm:left-[18%]">
+            <FaLocationDot className="text-gray xl:text-2xl" />
           </span>
           <span className="absolute top-[20%] left-[13%]">
-            <FaLocationDot className="text-gray text-2xl" />
+            <FaLocationDot className="text-gray xl:text-2xl" />
           </span>
-          <span className="absolute top-[35%] right-[30%]">
-            <FaLocationDot className="text-gray text-2xl" />
+          <span className="absolute top-[35%] right-[30%] max-sm:right-[22%]">
+            <FaLocationDot className="text-gray xl:text-2xl" />
           </span>
-          <span className="absolute top-[20%] right-[40%]">
-            <FaLocationDot className="text-gray text-2xl" />
+          <span className="absolute top-[20%] right-[40%] max-sm:right-[32%]">
+            <FaLocationDot className="text-gray xl:text-2xl" />
           </span>
-          <span className="absolute top-[23%] right-[22%] flex flex-col items-center gap-2 text-gray">
-            <FaLocationDot className="text-primary text-2xl" />
+          <span className="absolute top-[23%] right-[22%] max-sm:right-[10%] flex flex-col items-center gap-2 text-gray">
+            <FaLocationDot className="text-primary xl:text-2xl" />
             Montreal, Canada
           </span>
         </div>
@@ -68,7 +68,7 @@ const OurOffice = () => {
           {offices.map((office, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center text-center bg-[#F5F5F5] p-9 ${
+              className={`flex flex-col items-center text-center bg-[#F5F5F5] xl:p-9 p-4 ${
                 office.active && "border-b-2 border-primary"
               }`}
             >
@@ -76,7 +76,7 @@ const OurOffice = () => {
                 <FaLocationDot
                   className={`${
                     office.active ? "text-primary" : "text-gray"
-                  } text-4xl`}
+                  } xl:text-4xl md:text-2xl text-xl`}
                 />
               </p>
               <h4 className="text-black mt-10 mb-7">{office.name}</h4>

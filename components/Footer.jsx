@@ -8,7 +8,7 @@ import globe from "@/public/dot-globe.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0a1b23] text-white pt-120 pb-7 px-4 md:px-10">
+    <footer className="bg-[#0a1b23] text-white xl:pt-120 pt-16 pb-7 px-4 md:px-10">
       <div className="container mx-auto px-2 grid xl:grid-cols-4 2xl:gap-40 xl:gap-20 gap-10">
         {/* Logo & Input */}
         <div>
