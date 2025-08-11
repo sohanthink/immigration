@@ -3,22 +3,23 @@ import React from "react";
 import { FaFacebookF, FaInstagram } from "react-icons/fa";
 import { IoShareSocialSharp } from "react-icons/io5";
 import { BiSolidMessageSquareDots } from "react-icons/bi";
+import Link from "next/link";
 
 const TeamMemberCard = ({ member }) => {
   return (
     <div className="group relative">
       {/* Image Container */}
-      <div className="relative overflow-hidden">
-        <Image
-          width={300}
-          height={400}
-          src={member.image}
-          alt={member.name}
-          className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-
-        {/* Red accent line */}
-      </div>
+      <Link href={`/jhon-mirkwood`}>
+        <div className="relative overflow-hidden">
+          <Image
+            width={300}
+            height={400}
+            src={member.image}
+            alt={member.name}
+            className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+      </Link>
 
       {/* Member Info */}
       <div className="flex justify-center absolute -bottom-10 left-0 w-full">

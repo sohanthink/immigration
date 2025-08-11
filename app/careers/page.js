@@ -12,18 +12,18 @@ export default function Careers() {
         title={"Let’s Join With Us"}
         breadcrumb={{ homeLabel: "Home", current: "Careers" }}
       />
-      <div className="container mx-auto flex flex-col items-center justify-center px-2 py-120">
+      <div className="container mx-auto flex flex-col items-center justify-center px-2 xl:py-120 py-16">
         {/* Header */}
-        <div className="w-full flex justify-between items-start p-4">
+        <div className="w-full sm:flex justify-between items-start p-4">
           {/* Logo */}
-          <div className="p-7 border border-gray rounded-4xl">
-            <Image src={demoLogo} alt="Logo" width={200} height={200} />
+          <div className="xl:p-7 p-5 border flex justify-center items-center border-gray rounded-4xl">
+            <Image src={demoLogo} alt="Logo" className="xl:w-52 xl:h-52 w-28 h-28"/>
           </div>
 
           {/* Social Links */}
           <div>
-            <h3 className="">Join with Us Now</h3>
-            <div className="flex gap-3 mt-5">
+            <h3 className="max-sm:mt-10 max-sm:text-center">Join with Us Now</h3>
+            <div className="flex max-sm:justify-center gap-3 mt-5">
               <Link
                 href="#"
                 className="p-3 border border-gray rounded-full hover:bg-gray-100"
@@ -47,7 +47,7 @@ export default function Careers() {
         </div>
 
         {/* Body */}
-        <div className="text-center mt-20">
+        <div className="text-center xl:mt-20 mt-10">
           <PiToolboxFill size={200} className="mx-auto text-gray mb-6" />
           <h2 className="text-black">
             We appreciate your interest, but at the moment, <br />
@@ -58,7 +58,7 @@ export default function Careers() {
             talented individuals <br /> to join our team in the future.
           </p>
 
-          <button className="primary-button mt-120">BACK TO HOME PAGE</button>
+          <button className="primary-button xl:mt-120 mt-16">BACK TO HOME PAGE</button>
         </div>
       </div>
     </section>

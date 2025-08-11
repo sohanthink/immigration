@@ -26,7 +26,7 @@ const BlogHeader = () => {
   return (
     <div className="w-full">
       {/* Top header */}
-      <div className="flex justify-between items-center bg-white shadow p-5 relative">
+      <div className="flex max-sm:flex-col max-sm:gap-5 justify-between items-center bg-white shadow p-5 relative">
         {/* Filter button */}
         <button
           onClick={() => setShowFilter(!showFilter)}

@@ -29,7 +29,7 @@ const offices = [
 
 const OurOffice = () => {
   return (
-    <section className="text-black pb-120">
+    <section className="text-black xl:pb-120 pb-16">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <p className="text-primary uppercase mb-6">About Immigration</p>
@@ -64,7 +64,7 @@ const OurOffice = () => {
           </span>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-7">
+        <div className="mt-10 grid grid-cols-2 md:grid-cols-4 xl:gap-7 gap-4">
           {offices.map((office, index) => (
             <div
               key={index}
@@ -79,7 +79,7 @@ const OurOffice = () => {
                   } xl:text-4xl md:text-2xl text-xl`}
                 />
               </p>
-              <h4 className="text-black mt-10 mb-7">{office.name}</h4>
+              <h4 className="text-black xl:mt-10 mt-6 xl:mb-7 mb-5">{office.name}</h4>
               <p className="text-gray">{office.location}</p>
             </div>
           ))}

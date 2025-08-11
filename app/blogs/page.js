@@ -41,13 +41,14 @@ export default function Blogs() {
         breadcrumb={{ homeLabel: "Home", current: "Blogs" }}
       />
       <News title={"Featured News"} blogData={blogData} />
-      <section className="py-120">
+      <section className="xl:py-120 py-16">
         <div className="container mx-auto px-2">
           <h2 className="mb-16">All blog posts</h2>
           <BlogHeader />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
+          <div className="grid max-sm:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
             <BlogCard
+              link={"/blog-view"}
               image={blog1}
               date="31 Jan"
               author="Ismail"
@@ -55,6 +56,7 @@ export default function Blogs() {
               title="2025 Canadian Election outcome: What's at..."
             />
             <BlogCard
+              link={"/blog-view"}
               image={blog2}
               date="31 Jan"
               author="Ismail"
@@ -62,6 +64,7 @@ export default function Blogs() {
               title="How to Financial plan for the future of your business..."
             />
             <BlogCard
+              link={"/blog-view"}
               image={blog3}
               date="31 Jan"
               author="Ismail"
@@ -69,6 +72,7 @@ export default function Blogs() {
               title="How to bring your LATAM Business ..."
             />
             <BlogCard
+              link={"/blog-view"}
               image={blog1}
               date="31 Jan"
               author="Ismail"
@@ -76,6 +80,7 @@ export default function Blogs() {
               title="2025 Canadian Election outcome: What's at..."
             />
             <BlogCard
+              link={"/blog-view"}
               image={blog2}
               date="31 Jan"
               author="Ismail"
@@ -83,6 +88,7 @@ export default function Blogs() {
               title="How to Financial plan for the future of your business..."
             />
             <BlogCard
+              link={"/blog-view"}
               image={blog3}
               date="31 Jan"
               author="Ismail"
@@ -90,6 +96,7 @@ export default function Blogs() {
               title="How to bring your LATAM Business ..."
             />
             <BlogCard
+              link={"/blog-view"}
               image={blog1}
               date="31 Jan"
               author="Ismail"
@@ -97,6 +104,7 @@ export default function Blogs() {
               title="2025 Canadian Election outcome: What's at..."
             />
             <BlogCard
+              link={"/blog-view"}
               image={blog2}
               date="31 Jan"
               author="Ismail"
@@ -104,6 +112,7 @@ export default function Blogs() {
               title="How to Financial plan for the future of your business..."
             />
             <BlogCard
+              link={"/blog-view"}
               image={blog3}
               date="31 Jan"
               author="Ismail"
@@ -113,16 +122,16 @@ export default function Blogs() {
           </div>
         </div>
       </section>
-      <section className="mb-120">
-        <div className="container mx-auto px-2 bg-[#F0F0F0] flex">
-          <h2 className="p-20">Ask the Immigration Expert</h2>
-          <div className="p-20">
+      <section className="xl:mb-120 mb-16">
+        <div className="container mx-auto px-2 bg-[#F0F0F0] flex max-sm:flex-col items-center">
+          <h2 className="xl:p-20 lg:p-10 p-5">Ask the Immigration Expert</h2>
+          <div className="xl:p-20 lg:p-10 p-5">
             <h5 className="text-gray">
               Curious about business or immigration? Dive into our exclusive
               video series, where we unpack key topics and provide valuable
               insights to guide your journey.
             </h5>
-            <button className="border border-gray px-12 py-5 mt-10 hover:bg-primary cursor-pointer hover:text-white transition-all duration-300 transform">
+            <button className="border border-gray xl:px-12 px-6 xl:py-5 py-3 mt-10 hover:bg-primary cursor-pointer hover:text-white transition-all duration-300 transform ease-in-out max-sm:w-full">
               Explore Insight Expert
             </button>
           </div>

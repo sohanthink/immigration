@@ -41,9 +41,9 @@ export default function BlogView() {
           current: "How to Launch an Online Store",
         }}
       />
-      <section className="py-120">
-        <div className="flex gap-28 container mx-auto px-2">
-          <div className="w-4/5 text-gray">
+      <section className="xl:py-120 py-16">
+        <div className="flex max-xl:flex-col xl:gap-28 gap-10 container mx-auto px-2">
+          <div className="xl:w-4/5 text-gray">
             <p>
               Picture this: You wake up, check your phone, and see that while
               you slept, your store made sales from customers across the
@@ -243,7 +243,7 @@ export default function BlogView() {
               down the road.
             </p>
           </div>
-          <div className="w-1/5">
+          <div className="xl:w-1/5 sm:w-1/2 w-4/5 mx-auto">
             <ShareArticle />
           </div>
         </div>

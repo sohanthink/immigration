@@ -22,9 +22,10 @@ const News = ({ title, blogData }) => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-16">
+        <div className="grid max-sm:grid-cols-1 grid-cols-2 lg:grid-cols-3 gap-6 my-16">
           {blogData.map((item, index) => (
             <BlogCard
+              link={"/"}
               key={index}
               image={item.image}
               date={item.date}
@@ -34,27 +35,6 @@ const News = ({ title, blogData }) => {
               title={item.title}
             />
           ))}
-          {/* <BlogCard
-            image={blog1}
-            date="31 Jan"
-            author="Ismail"
-            comments={1}
-            title="2025 Canadian Election outcome: What's at..."
-          />
-          <BlogCard
-            image={blog2}
-            date="31 Jan"
-            author="Ismail"
-            comments={1}
-            title="How to Financial plan for the future of your business..."
-          />
-          <BlogCard
-            image={blog3}
-            date="31 Jan"
-            author="Ismail"
-            comments={1}
-            title="How to bring your LATAM Business ..."
-          /> */}
         </div>
       </div>
     </section>
