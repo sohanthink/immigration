@@ -5,6 +5,7 @@ import dotMap from "@/public/dot-map.webp";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import SectionHeading from "@/components/common/SectionHeading";
 
 export default function Contact() {
   return (
@@ -14,7 +15,7 @@ export default function Contact() {
         breadcrumb={{ homeLabel: "Home", current: "Contact Us" }}
       />
 
-      <section className="bg-cover bg-center bg-no-repeat py-120 relative">
+      <section className="bg-cover bg-center bg-no-repeat xl:py-120 py-16 relative">
         <div className="absolute inset-0 z-0">
           <Image
             src={dotMap}
@@ -28,11 +29,11 @@ export default function Contact() {
         <div className="w-full flex items-center justify-center px-4 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 w-full container mx-auto">
             {/* Left Side: Form */}
-            <div className="pr-32">
+            <div className="xl:pr-28 sm:pr-16 pr-0">
               <h2 className="text-black mb-10">Send Message</h2>
 
               <form className="space-y-6">
-                <div className="grid grid-cols-2 gap-7">
+                <div className="grid sm:grid-cols-2 gap-7">
                   <div>
                     <label className="block  mb-1">Name *</label>
                     <input
@@ -105,9 +106,12 @@ export default function Contact() {
             </div>
 
             {/* Right Side: Info */}
-            <div className="pl-28 border-l border-[#A4A4A4]">
-              <p className="text-primary uppercase">Contact Me</p>
-              <h2 className="text-black mb-16">Get in touch with Us</h2>
+            <div className="xl:pl-28 sm:pl-16 pl-0 sm:border-l border-[#A4A4A4] max-sm:mt-16">
+              <SectionHeading
+                title="Contact Us"
+                subTitle="Get in touch with Us"
+                subClassName={"mb-16"}
+              />
 
               <div className="space-y-6">
                 <div className="flex items-start gap-4">

@@ -21,6 +21,7 @@ const NewsAndArticles = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 xl:my-16 my-10">
           <BlogCard
+            link={"/"}
             image={blog1}
             date="31 Jan"
             author="Ismail"
@@ -28,6 +29,7 @@ const NewsAndArticles = () => {
             title="2025 Canadian Election outcome: What's at..."
           />
           <BlogCard
+            link={"/"}
             image={blog2}
             date="31 Jan"
             author="Ismail"
@@ -35,6 +37,7 @@ const NewsAndArticles = () => {
             title="How to Financial plan for the future of your business..."
           />
           <BlogCard
+            link={"/"}
             image={blog3}
             date="31 Jan"
             author="Ismail"

@@ -1,11 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 import { BiTime } from "react-icons/bi";
 import { FaRegComments } from "react-icons/fa";
 import { FaRegCircleUser } from "react-icons/fa6";
 
-const BlogCard = ({ image, date, author, comments, title, eventTime, key }) => {
+const BlogCard = ({
+  image,
+  date,
+  author,
+  comments,
+  title,
+  eventTime,
+  key,
+  link,
+}) => {
   return (
-    <div key={key} className="relative group cursor-pointer">
+    <Link href={`${link}`} key={key} className="relative group cursor-pointer">
       <Image
         src={image}
         alt={title}
@@ -48,7 +58,7 @@ const BlogCard = ({ image, date, author, comments, title, eventTime, key }) => {
           </h4>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

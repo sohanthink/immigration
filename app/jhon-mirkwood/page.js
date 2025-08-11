@@ -22,8 +22,8 @@ export default function JhonMirkwood() {
         }
         breadcrumb={{ homeLabel: "Home", current: "Jhon Mirkwood" }}
       />
-      <section className="container mx-auto px-2 py-120">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-20">
+      <section className="container mx-auto px-2 xl:py-120 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:gap-20 sm:gap-12 gap-5">
           <div className="col-span-1">
             <Image
               width={300}
@@ -57,9 +57,9 @@ export default function JhonMirkwood() {
               such as World of Warcraft and Sid Meier’s Civilization IV, or an
               occasional game of chess.
             </p>
-            <h4 className="mt-12 mb-6">Contact:</h4>
+            <h4 className="mt-12 mb-6 max-sm:text-center">Contact:</h4>
             <div>
-              <div className="flex items-center gap-3.5">
+              <div className="flex items-center gap-3.5 max-sm:justify-center">
                 <Link
                   href="#"
                   className="text-gray transition-transform duration-300 hover:scale-110 border border-gray rounded-full p-3"
@@ -88,7 +88,7 @@ export default function JhonMirkwood() {
             </div>
           </div>
         </div>
-        <div className="flex justify-center gap-14 mt-120">
+        <div className="flex justify-center gap-14 xl:mt-120 mt-16">
           <button className="primary-button bg-[#E8E8E8] text-gray flex items-center gap-2">
             <LuMoveLeft /> Preview
           </button>

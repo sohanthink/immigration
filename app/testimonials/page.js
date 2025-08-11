@@ -55,24 +55,20 @@ export default function Testimonials() {
   return (
     <>
       <HeroSection
-        title={
-          <>
-            Real Stories, Real <br /> Impact
-          </>
-        }
+        title={"Real Stories, Real Impact"}
         breadcrumb={{ homeLabel: "Home", current: "Testimonials" }}
       />
-      <section className="container mx-auto px-2 py-120">
-        <div className="mb-20 flex justify-between">
+      <section className="container mx-auto px-2 xl:py-120 py-16">
+        <div className="mb-20 sm:flex justify-between max-sm:text-center">
           <div>
             <h5 className="mb-1 text-black">
               Review On <span className="text-primary">★★★★★</span>
             </h5>
             <h5 className="text-gray">[10+ Google Reviews]</h5>
           </div>
-          <div>
+          <div className="max-sm:mt-5 max-sm:flex max-sm:flex-col max-sm:items-center">
             <h4 className="text-black">Write A Review</h4>
-            <button className="flex items-center bg-[#DADADA] py-4 px-8 gap-14 mt-5">
+            <button className="flex items-center bg-[#DADADA] xl:py-4 py-3 px-5 xl:px-8 xl:gap-14 md:gap-7 gap-5 mt-5">
               <span className="flex items-center gap-2.5">
                 <FcGoogle className="w-6 h-6" /> Review Us On Google
               </span>
@@ -94,7 +90,7 @@ export default function Testimonials() {
         </div>
 
         <div className="flex justify-center">
-          <button className="border border-primary text-primary py-5 px-16 mt-20 hover:bg-primary hover:text-white transition duration-300 ease-in-out hover:scale-105 cursor-pointer">
+          <button className="border border-primary text-primary md:py-5 md:px-16 py-3 px-10 mt-20 hover:bg-primary hover:text-white transition duration-300 ease-in-out hover:scale-105 cursor-pointer">
             Load more
           </button>
         </div>
