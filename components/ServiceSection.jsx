@@ -14,6 +14,9 @@ const ServiceSection = ({
   included,
   steps,
   bgImage,
+  cardHeadingOne,
+  cardHeadingTwo,
+  cardHeadingThree,
 }) => {
   return (
     <section className=" text-black relative">
@@ -42,7 +45,7 @@ const ServiceSection = ({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:mt-120 mt-16">
           {/* Pricing */}
           <Card className={"border-blue"}>
-            <h3>Starting Price</h3>
+            <h3>{cardHeadingOne}</h3>
             <h4 className="text-primary mt-6 mb-8">{startingPrice}</h4>
             <h4>Days Until First Draft</h4>
             <p className="text-gray bg-gray/5 w-fit mt-4 px-6 py-2">
@@ -61,7 +64,7 @@ const ServiceSection = ({
 
           {/* Included */}
           <Card className={"border-primary"}>
-            <h3>Included:</h3>
+            <h3>{cardHeadingTwo}</h3>
             <ul className="space-y-8 mt-6">
               {included.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2 text-gray">
@@ -73,7 +76,7 @@ const ServiceSection = ({
 
           {/* Steps */}
           <Card className={"border-success"}>
-            <h3>10 Step Process:</h3>
+            <h3>{cardHeadingThree}</h3>
             <ul className="space-y-8 mt-6">
               {steps.map((step, idx) => (
                 <li key={idx} className="flex items-center gap-2 text-gray">
