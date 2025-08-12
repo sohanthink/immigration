@@ -111,7 +111,7 @@ const Navbar = () => {
                           <div className="absolute left-full top-0 ml-2 w-76 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
                             <div className="text-black space-y-6">
                               <Link
-                                href={"#"}
+                                href={"/business-concept"}
                                 className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
                               >
                                 Business Concept Exploration

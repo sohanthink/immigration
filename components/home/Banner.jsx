@@ -35,10 +35,10 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="relative z-10 flex items-center h-full container mx-auto px-2 xl:px-10 2xl:px-2">
+        <div className="relative z-10 flex items-center h-full container mx-auto px-2 xl:px-20 2xl:px-2">
           <div className="relative">
             <h1 className="text-white max-w-[850px]">
-              Turn your dream into reality Immigrate to Canada
+              Turn your dream <br /> into reality <br /> Immigrate to Canada
             </h1>
             <Image
               src={lineIcon}
