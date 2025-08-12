@@ -20,6 +20,9 @@ const demoData = {
   deliveryTime: "10–15 business days",
   rushAvailable: true,
   numberOfPages: "Custom",
+  cardHeadingOne: "Starting Price",
+  cardHeadingTwo: "Included:",
+  cardHeadingThree: "10 Step Process:",
   included: [
     "Professional Graphic Design",
     "Personalized Business Plan",
@@ -48,6 +51,10 @@ export default function BusinessConcept() {
         subtitle={
           "Selecting the right business idea is a critical first step. This phase includes expert guidance on entering the Canadian market, outlining a clear step-by-step process and strategic approach to successfully launch your business in Canada"
         }
+        breadcrumb={{
+          homeLabel: "Home",
+          current: "Business Concept Exploration",
+        }}
       />
       <ServiceSection {...demoData} />
       <HistorySection />

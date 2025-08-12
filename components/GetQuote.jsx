@@ -12,8 +12,20 @@ const GetQuote = () => {
               title={"Selection Business Idea"}
               subTitle={"Get a Quote"}
             />
-            <div>
-              <Image src={image1} alt="Get Quote" className="mt-5" />
+            <div className="relative">
+              <Image
+                src={image1}
+                alt="Get Quote"
+                className="mt-5 relative z-10"
+              />
+              {/* Radial gradient background */}
+              <div
+                className="absolute top-1/2 left-1/2 w-96 h-96 -translate-x-2/3 -translate-y-5 z-0"
+                style={{
+                  background:
+                    "radial-gradient(circle, rgba(255,0,0,0.6) 0%, rgba(255,0,0,0) 70%)",
+                }}
+              ></div>
             </div>
           </div>
           {/* right Side: Form */}
@@ -75,34 +87,44 @@ const GetQuote = () => {
                     <input id="market" type="checkbox" className="w-4 h-4" />{" "}
                     <p>Market Overview</p>
                   </label>
-                  <label htmlFor="checkbox" className="flex items-center gap-2">
-                    <input id="checkbox" type="checkbox" className="w-4 h-4" />{" "}
+                  <label
+                    htmlFor="competitive"
+                    className="flex items-center gap-2"
+                  >
+                    <input
+                      id="competitive"
+                      type="checkbox"
+                      className="w-4 h-4"
+                    />{" "}
                     <p>Competitive Analysis</p>
                   </label>
-                  <label htmlFor="checkbox" className="flex items-center gap-2">
-                    <input id="checkbox" type="checkbox" className="w-4 h-4" />{" "}
+                  <label htmlFor="location" className="flex items-center gap-2">
+                    <input id="location" type="checkbox" className="w-4 h-4" />{" "}
                     <p>Location Analysis</p>
                   </label>
-                  <label htmlFor="checkbox" className="flex items-center gap-2">
-                    <input id="checkbox" type="checkbox" className="w-4 h-4" />{" "}
+                  <label htmlFor="product" className="flex items-center gap-2">
+                    <input id="product" type="checkbox" className="w-4 h-4" />{" "}
                     <p>Price Analysis & Product Comparison</p>
                   </label>
-                  <label htmlFor="checkbox" className="flex items-center gap-2">
-                    <input id="checkbox" type="checkbox" className="w-4 h-4" />{" "}
+                  <label htmlFor="value" className="flex items-center gap-2">
+                    <input id="value" type="checkbox" className="w-4 h-4" />{" "}
                     <p>Value Chain Analysis</p>
                   </label>
                 </div>
                 <div className="space-y-4">
-                  <label htmlFor="checkbox" className="flex items-center gap-2">
-                    <input id="checkbox" type="checkbox" className="w-4 h-4" />{" "}
+                  <label
+                    htmlFor="potential"
+                    className="flex items-center gap-2"
+                  >
+                    <input id="potential" type="checkbox" className="w-4 h-4" />{" "}
                     <p>Potential List of Clients</p>
                   </label>
-                  <label htmlFor="checkbox" className="flex items-center gap-2">
-                    <input id="checkbox" type="checkbox" className="w-4 h-4" />{" "}
+                  <label htmlFor="data" className="flex items-center gap-2">
+                    <input id="data" type="checkbox" className="w-4 h-4" />{" "}
                     <p>Data Analysis</p>
                   </label>
-                  <label htmlFor="checkbox" className="flex items-center gap-2">
-                    <input id="checkbox" type="checkbox" className="w-4 h-4" />{" "}
+                  <label htmlFor="other" className="flex items-center gap-2">
+                    <input id="other" type="checkbox" className="w-4 h-4" />{" "}
                     <p>Other</p>
                   </label>
                 </div>

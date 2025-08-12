@@ -118,14 +118,14 @@ const Navbar = () => {
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
                               <Link
-                                href={"#"}
+                                href={"baseline-discovery"}
                                 className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
                               >
                                 Strategic Assessment
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
                               <Link
-                                href={"#"}
+                                href={"strategic-research"}
                                 className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
                               >
                                 Strategic Research ...

@@ -30,7 +30,7 @@ const ServiceHeroSection = ({
         <div className="absolute inset-0 bg-gradient-to-l from-[#09161D] to-[#09161D]/80 z-10" />
 
         {/* Content */}
-        <div className="relative z-20 text-center px-4">
+        <div className="relative z-20 text-center px-2 xl:px-20 2xl:px-2">
           <div>
             <h1 className="max-w-7xl mx-auto">{title}</h1>
             {subtitle && <p className="max-w-4xl mx-auto mt-7">{subtitle}</p>}
@@ -40,7 +40,7 @@ const ServiceHeroSection = ({
           </div>
         </div>
       </div>
-      <div className="container mx-auto absolute z-20 bottom-12">
+      <div className="container mx-auto absolute z-20 bottom-12 px-2 xl:px-20 2xl:px-2">
         <h5 className="flex justify-start gap-2 relative">
           <Link
             href="/"
