@@ -2,7 +2,6 @@ import HeroSection from "@/components/HeroSection";
 import ReviewCard from "@/components/ReviewCard";
 import avatar1 from "@/public/testimonials/avatar1.png";
 import avatar2 from "@/public/testimonials/avatar2.png";
-import Link from "next/link";
 import { FaChevronDown } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 

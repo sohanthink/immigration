@@ -8,6 +8,7 @@ const ServiceSection = ({
   description,
   image,
   startingPrice,
+  subTitle,
   deliveryTime,
   rushAvailable,
   numberOfPages,
@@ -17,6 +18,7 @@ const ServiceSection = ({
   cardHeadingOne,
   cardHeadingTwo,
   cardHeadingThree,
+  fourthCard = false,
 }) => {
   return (
     <section className=" text-black relative">
@@ -47,20 +49,43 @@ const ServiceSection = ({
           <Card className={"border-blue"}>
             <h3>{cardHeadingOne}</h3>
             <h4 className="text-primary mt-6 mb-8">{startingPrice}</h4>
-            <h4>Days Until First Draft</h4>
-            <p className="text-gray bg-gray/5 w-fit mt-4 px-6 py-2">
+            <h4>{subTitle}</h4>
+            <p className="text-gray bg-[#F6F6F6] w-fit mt-4 px-6 py-2">
               {deliveryTime}
             </p>
-            {rushAvailable && (
+            {rushAvailable ? (
               <span className="inline-block bg-[#FFFF32] text-black px-6 py-2 mt-10 rounded">
                 Rush service available
               </span>
+            ) : (
+              <span className="inline-block text-black px-6 py-2 mt-12 rounded"></span>
             )}
             <h4 className="mt-20">Number of Pages</h4>
-            <p className="text-gray bg-gray/5 w-fit mt-4 px-6 py-2">
+            <p className="text-gray bg-[#F6F6F6] w-fit mt-4 px-6 py-2">
               {numberOfPages}
             </p>
           </Card>
+          {fourthCard && (
+            <Card className={"border-primary"}>
+              <h3>{cardHeadingOne}</h3>
+              <h4 className="text-primary mt-6 mb-8">{startingPrice}</h4>
+              <h4>{subTitle}</h4>
+              <p className="text-gray bg-[#F6F6F6] w-fit mt-4 px-6 py-2">
+                {deliveryTime}
+              </p>
+              {rushAvailable ? (
+                <span className="inline-block bg-[#FFFF32] text-black px-6 py-2 mt-10 rounded">
+                  Rush service available
+                </span>
+              ) : (
+                <span className="inline-block text-black px-6 py-2 mt-12 rounded"></span>
+              )}
+              <h4 className="mt-20">Number of Pages</h4>
+              <p className="text-gray bg-[#F6F6F6] w-fit mt-4 px-6 py-2">
+                {numberOfPages}
+              </p>
+            </Card>
+          )}
 
           {/* Included */}
           <Card className={"border-primary"}>
