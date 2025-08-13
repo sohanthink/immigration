@@ -17,6 +17,7 @@ const demoData = {
   ],
   image: image1,
   startingPrice: "C$ 35.00",
+  subTitle: "Days Until First Draft",
   deliveryTime: "10–15 business days",
   rushAvailable: true,
   numberOfPages: "Custom",

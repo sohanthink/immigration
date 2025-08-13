@@ -108,7 +108,7 @@ const Navbar = () => {
                           </span>
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           {/* Nested Menu */}
-                          <div className="absolute left-full top-0 ml-2 w-76 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
+                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
                             <div className="text-black space-y-6">
                               <Link
                                 href={"/business-concept"}
@@ -134,24 +134,70 @@ const Navbar = () => {
                             </div>
                           </div>
                         </li>
-                        <Link
-                          href={"#"}
-                          className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
-                        >
+                        <li className="group/megaMenu w-fit text-lg text-black hover:text-primary relative">
                           <span className="flex items-center gap-5">
                             Business Idea Selection <GoChevronRight />
                           </span>
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                        </Link>
-                        <Link
-                          href={"#"}
-                          className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
-                        >
+                          {/* Nested Menu */}
+                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
+                            <div className="text-black space-y-6">
+                              <Link
+                                href={"/start-up-visa-application"}
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Start-Up Visa Application
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                              <Link
+                                href={"self-employment-business-proposal"}
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Self-Employment Business Proposal
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                              <Link
+                                href={"intra-company-transfer-immigration-plan"}
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Intra-Company Transfer Immigration Plan
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                            </div>
+                          </div>
+                        </li>
+                        <li className="group/megaMenu w-fit text-lg text-black hover:text-primary relative">
                           <span className="flex items-center gap-5">
                             Business Idea Selection <GoChevronRight />
                           </span>
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                        </Link>
+                          {/* Nested Menu */}
+                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
+                            <div className="text-black space-y-6">
+                              <Link
+                                href={"/aaip-business-plans"}
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                AAIP-Compliant Business Plan
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                              <Link
+                                href={"self-employment-business-proposal"}
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Self-Employment Business Proposal
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                              <Link
+                                href={"intra-company-transfer-immigration-plan"}
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Intra-Company Transfer Immigration Plan
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                            </div>
+                          </div>
+                        </li>
                         <Link
                           href={"#"}
                           className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
