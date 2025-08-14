@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Card from "./common/Card";
 import { IoCheckmarkCircle } from "react-icons/io5";
+import { TbClock24 } from "react-icons/tb";
 
 const ServiceSection = ({
   title,
@@ -54,8 +55,8 @@ const ServiceSection = ({
               {deliveryTime}
             </p>
             {rushAvailable ? (
-              <span className="inline-block bg-[#FFFF32] text-black px-6 py-2 mt-10 rounded">
-                Rush service available
+              <span className="bg-[#FFFF32] text-black px-6 py-2 mt-10 rounded flex items-center w-fit gap-2">
+                <TbClock24 className="w-6 h-6" /> Rush service available
               </span>
             ) : (
               <span className="inline-block text-black px-6 py-2 mt-12 rounded"></span>
@@ -74,8 +75,8 @@ const ServiceSection = ({
                 {deliveryTime}
               </p>
               {rushAvailable ? (
-                <span className="inline-block bg-[#FFFF32] text-black px-6 py-2 mt-10 rounded">
-                  Rush service available
+                <span className="bg-[#FFFF32] text-black px-6 py-2 mt-10 rounded flex items-center w-fit gap-2">
+                  <TbClock24 className="w-6 h-6" /> Rush service available
                 </span>
               ) : (
                 <span className="inline-block text-black px-6 py-2 mt-12 rounded"></span>
@@ -93,7 +94,10 @@ const ServiceSection = ({
             <ul className="space-y-8 mt-6">
               {included.map((item, idx) => (
                 <li key={idx} className="flex items-center gap-2 text-gray">
-                  <IoCheckmarkCircle className="text-blue text-lg" /> {item}
+                  <div>
+                    <IoCheckmarkCircle className="text-blue text-lg" />
+                  </div>
+                  {item}
                 </li>
               ))}
             </ul>
@@ -105,7 +109,9 @@ const ServiceSection = ({
             <ul className="space-y-8 mt-6">
               {steps.map((step, idx) => (
                 <li key={idx} className="flex items-center gap-2 text-gray">
-                  <IoCheckmarkCircle className="text-blue text-lg" />
+                  <div>
+                    <IoCheckmarkCircle className="text-blue text-lg" />
+                  </div>
                   {step.text}
                 </li>
               ))}

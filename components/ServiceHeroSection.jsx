@@ -32,16 +32,16 @@ const ServiceHeroSection = ({
         {/* Content */}
         <div className="relative z-20 text-center px-2 xl:px-20 2xl:px-2">
           <div>
-            <h1 className="max-w-7xl mx-auto">{title}</h1>
+            <h1 className="max-w-7xl lg:!text-7xl mx-auto">{title}</h1>
             {subtitle && <p className="max-w-4xl mx-auto mt-7">{subtitle}</p>}
-            <button className="px-14 py-5 bg-white text-black mt-10">
+            <button className="px-10 py-4 bg-white text-black font-medium mt-10">
               Get A Quote
             </button>
           </div>
         </div>
       </div>
       <div className="container mx-auto absolute z-20 bottom-12 px-2 xl:px-20 2xl:px-2">
-        <h5 className="flex justify-start gap-2 relative">
+        <p className="flex justify-start gap-2 relative">
           <Link
             href="/"
             className="text-primary flex items-center gap-2 max-sm:text-xs"
@@ -64,7 +64,7 @@ const ServiceHeroSection = ({
           <span className="max-sm:text-xs text-white">
             {breadcrumb.current}
           </span>
-        </h5>
+        </p>
       </div>
     </section>
   );

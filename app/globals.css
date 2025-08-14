@@ -19,7 +19,7 @@
 }
 
 h1 {
-  @apply text-[36px] font-extrabold leading-[44px] sm:text-[48px] sm:leading-[56px] lg:text-[82px] lg:leading-[95px];
+  @apply text-4xl font-extrabold leading-[44px] sm:text-5xl sm:leading-[56px] lg:text-[82px] lg:leading-[95px];
 }
 
 h2 {

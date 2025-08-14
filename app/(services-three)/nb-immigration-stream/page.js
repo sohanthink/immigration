@@ -1,5 +1,5 @@
 import ServiceSection from "@/components/ServiceSection";
-import image from "@/public/services/image4.webp";
+import image from "@/public/services/image15.webp";
 import imageBg from "@/public/services/bg.webp";
 import ServiceHeroSection from "@/components/ServiceHeroSection";
 import HistorySection from "@/components/about/HistorySection";
@@ -9,45 +9,42 @@ import GetQuote from "@/components/GetQuote";
 import HowWeWork from "@/components/HowWeWork";
 
 const demoData = {
-  title: "Canada’s Start-Up Visa Program",
+  title: "Business Plan for New Brunswick's Immigration Stream",
   description: [
-    "Canada continues to stand as a global destination for enterprising innovators. The Start-Up Visa Program invites forward-thinking entrepreneurs with competitive business ideas, aiming to spark job creation and fuel nationwide economic growth.",
-    "In contrast to regional Provincial Nominee Programs for entrepreneurs, Canada’s federal Start-Up Visa Program requires a Letter of Support from a designated organization—such as a venture capital fund, angel investor, or business incubator. (A complete list of designated organizations is available here.)",
-    "Investors sift through numerous business plans and pitches daily. Their standards are high, and their evaluation process is exacting. To stand out—and earn their confidence—you need a strong concept, backed by a sharp, well-crafted business plan or pitch deck.",
-    "Our business plan team brings deep experience tailoring documents for high-stakes audiences. With backgrounds in investment banking, venture capital, and funding organizations, we offer the strategic insight and industry fluency required to craft compelling, investor-ready plans.",
+    "The New Brunswick Provincial Nominee Program (NBPNP) is designed to stimulate economic growth across the province. Among its various immigration streams are dedicated pathways for qualified entrepreneurs and business owners who plan to actively manage a new or acquired business in New Brunswick.",
+    "A comprehensive business plan is a mandatory component of the application process. It must clearly articulate the operational structure and viability of the proposed business, while also demonstrating its potential to deliver tangible economic benefits to the region.",
+    "Our seasoned team of immigration and business plan specialists possesses deep expertise in the unique priorities and requirements of all Provincial Nominee Programs (PNPs). We collaborate closely with applicants, immigration consultants, or legal representatives to ensure every business plan is strategically aligned with the client’s immigration objectives—maximizing the likelihood of a successful application.",
   ],
   image: image,
-  cardHeadingOne: "SUV Business",
-  startingPrice: "C$ 3680",
-  subTitle: "SUV Business Plan",
-  deliveryTime: "10–15 business days",
-  numberOfPages: "Depending on Designated Organization",
-  rushAvailable: false,
-  fourthCard: true,
-  fourthCardHeadingOne: "SUV Pitch Deck",
-  fourthStartingPrice: "C$ 2600",
-  fourthSubTitle: "SUV Pitch Deck",
-  fourthDeliveryTime: "10–15 business days",
-  fourthNumberOfPages: "35-50 slides",
+
+  cardHeadingOne: "Starting Price",
+  startingPrice: "C$ 2200",
+  subTitle: "Days Until First Draft",
+  deliveryTime: "7-10 business days",
+  rushAvailable: true,
+  numberOfPages: "25 – 35 pages",
+
   cardHeadingTwo: "What You Get:",
-  cardHeadingThree: "What's Included in Pitch Deck:",
   included: [
-    "Business Description",
-    "Industry Analysis",
-    "Market Analysis",
-    "Marketing Plan",
-    "Personnel Plan",
-    "Financial Projections (5 years)",
+    "Dedicated Team",
+    "Industry Expertise",
+    "Assessment of Applicant’s Profil",
+    "Flat Rate Pricing",
+    "Unlimited Revisions",
+    "Personalized Business Plan",
   ],
+
+  cardHeadingThree: "What's Included:",
   steps: [
-    { text: "Executive Summary" },
-    { text: "Market Opportunity" },
-    { text: "The Solution – Service Description" },
-    { text: "Market Approach & Strategy" },
-    { text: "Financials" },
-    { text: "Deal description / Structure / Details" },
-    { text: "High-level snapshot of key figures" },
-    { text: "Description of problem" },
+    { text: "Business Description" },
+    { text: "Applicant’s Experience and Job Description" },
+    { text: "Business Goals" },
+    { text: "Industry Regulations and Market Analysis" },
+    { text: "Marketing Plan" },
+    { text: "Resource Requirements" },
+    { text: "Human Resources Strategy" },
+    { text: "Financials (3 years)" },
+    { text: "Economic Benefit" },
   ],
   bgImage: imageBg,
 };
@@ -55,13 +52,13 @@ export default function NpImmigrationStream() {
   return (
     <>
       <ServiceHeroSection
-        title={"Business Plan for Start-Up Visa Application"}
+        title={"Business Plan for New Brunswick's Immigration Stream"}
         subtitle={
-          "Securing a Start-Up Visa in Canada requires endorsement from an incubator, angel investor, or venture capital group. A clear, compelling business plan is essential to earn their support."
+          "To immigrate to New Brunswick through the Business Immigration Stream of the New Brunswick Provincial Nominee Program (NBPNP), a well-prepared business plan is essential. Our team of seasoned professionals specializes in crafting strategic and persuasive plans that align with program requirements—designed to strengthen your application and enhance your chances of approval."
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "Business Plan for Start-Up Visa Application",
+          current: "Business Plan for New Brunswick's Immigration Stream",
         }}
       />
       <ServiceSection {...demoData} />
