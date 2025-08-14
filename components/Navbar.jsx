@@ -358,21 +358,28 @@ const Navbar = () => {
                         <ul className="space-y-6 mt-10 flex flex-col">
                           <h4 className="mb-7">Start Up</h4>
                           <Link
-                            href={"#"}
+                            href="/fueling-the-rise"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
+                          >
+                            Fueling the Rise
+                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
+                          </Link>
+                          <Link
+                            href="/a-pitch-deck"
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             A Pitch Deck
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
+                            href="/strategic-business-plan"
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Strategic Business Plan
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
+                            href="/strategic-financial-projection"
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Strategic Financial projection
