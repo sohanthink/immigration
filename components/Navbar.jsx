@@ -102,7 +102,7 @@ const Navbar = () => {
                         Canada Immigration:
                       </h4>
                       <ul className="space-y-6 mt-10 flex flex-col">
-                        <li className="group/megaMenu w-fit text-lg text-black hover:text-primary relative cursor-pointer">
+                        <li className="group/megaMenu w-fit text-black hover:text-primary relative cursor-pointer">
                           <span className="flex items-center gap-5">
                             Business Idea Selection <GoChevronRight />
                           </span>
@@ -112,21 +112,21 @@ const Navbar = () => {
                             <div className="text-black space-y-6">
                               <Link
                                 href={"/business-concept"}
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Business Concept Exploration
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
                               <Link
                                 href={"baseline-discovery"}
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Strategic Assessment
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
                               <Link
                                 href={"strategic-research"}
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Strategic Research ...
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
@@ -134,7 +134,7 @@ const Navbar = () => {
                             </div>
                           </div>
                         </li>
-                        <li className="group/megaMenu w-fit text-lg text-black hover:text-primary relative">
+                        <li className="group/megaMenu w-fit text-black hover:text-primary relative">
                           <span className="flex items-center gap-5">
                             Business Idea Selection <GoChevronRight />
                           </span>
@@ -144,21 +144,21 @@ const Navbar = () => {
                             <div className="text-black space-y-6">
                               <Link
                                 href={"/start-up-visa-application"}
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Start-Up Visa Application
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
                               <Link
                                 href={"self-employment-business-proposal"}
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Self-Employment Business Proposal
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
                               <Link
                                 href={"intra-company-transfer-immigration-plan"}
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Intra-Company Transfer Immigration Plan
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
@@ -166,7 +166,7 @@ const Navbar = () => {
                             </div>
                           </div>
                         </li>
-                        <li className="group/megaMenu w-fit text-lg text-black hover:text-primary relative">
+                        <li className="group/megaMenu w-fit text-black hover:text-primary relative">
                           <span className="flex items-center gap-5">
                             Business Idea Selection <GoChevronRight />
                           </span>
@@ -176,14 +176,14 @@ const Navbar = () => {
                             <div className="text-black space-y-6">
                               <Link
                                 href="/aaip-business-plans"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 AAIP-Compliant Business Plan
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
                               <Link
                                 href="/bc-pnp-business-planning"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Entrepreneurial Immigration Strategy – BC PNP
                                 Business Planning
@@ -192,7 +192,7 @@ const Navbar = () => {
 
                               <Link
                                 href="/bc-pnp-entrepreneur-immigration"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 British Columbia PNP – Entrepreneur Immigration:
                                 Regional Business Plan
@@ -201,7 +201,7 @@ const Navbar = () => {
 
                               <Link
                                 href="/bc-pnp-entrepreneur-stream"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Crafting Your Business Concept for BC’s PNP
                                 Entrepreneur Stream
@@ -210,7 +210,7 @@ const Navbar = () => {
 
                               <Link
                                 href="/plan-mpnp-entrepreneur-pathway"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Business Plan for Manitoba's MPNP Entrepreneur
                                 Pathway
@@ -219,7 +219,7 @@ const Navbar = () => {
 
                               <Link
                                 href="/concept-mpnp-entrepreneur-pathway"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Business Concept for Manitoba’s Entrepreneur
                                 Pathway (MPNP)
@@ -228,7 +228,7 @@ const Navbar = () => {
 
                               <Link
                                 href="/nsnp-business-plan"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Nova Scotia Nominee Program (NSNP) Business Plan
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
@@ -236,7 +236,7 @@ const Navbar = () => {
 
                               <Link
                                 href="/nwt-nominee-program"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Business Plan for the Northwest Territories
                                 Nominee Program
@@ -245,7 +245,7 @@ const Navbar = () => {
 
                               <Link
                                 href="/nb-immigration-stream"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Business Plan for New Brunswick's Immigration
                                 Stream
@@ -254,7 +254,7 @@ const Navbar = () => {
 
                               <Link
                                 href="/nl-pnp"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 Business Plan for Newfoundland and Labrador PNP
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
@@ -262,7 +262,7 @@ const Navbar = () => {
 
                               <Link
                                 href="/yukon-entrepreneur-stream"
-                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
                               >
                                 YBNP Entrepreneur Stream – Business Plan
                                 Overview
@@ -271,15 +271,45 @@ const Navbar = () => {
                             </div>
                           </div>
                         </li>
-                        <Link
-                          href={"#"}
-                          className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
-                        >
+                        <li className="group/megaMenu w-fit text-black hover:text-primary relative">
                           <span className="flex items-center gap-5">
                             Business Idea Selection <GoChevronRight />
                           </span>
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                        </Link>
+                          {/* Nested Menu */}
+                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
+                            <div className="text-black space-y-6">
+                              <Link
+                                href={"/lmia-owner-operator-stream"}
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
+                              >
+                                LMIA Owner-Operator Stream
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                              <Link
+                                href={"/c10-significant-benefit-work-permit"}
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
+                              >
+                                C10 Significant Benefit Work Permit
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                              <Link
+                                href={"/c11-entrepreneur-work-permit"}
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
+                              >
+                                C11 Entrepreneur Work Permit
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                              <Link
+                                href={"/fta-based-entrepreneurial"}
+                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
+                              >
+                                FTA-Based Entrepreneurial
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+                            </div>
+                          </div>
+                        </li>
                       </ul>
                     </div>
 
@@ -291,28 +321,28 @@ const Navbar = () => {
                       <ul className="space-y-6 mt-10 flex flex-col">
                         <Link
                           href={"#"}
-                          className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                          className="group/megaMenu w-fit text-black hover:text-primary relative"
                         >
                           E-2 Business plan
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                         </Link>
                         <Link
                           href={"#"}
-                          className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                          className="group/megaMenu w-fit text-black hover:text-primary relative"
                         >
                           Business plan L - 1
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                         </Link>
                         <Link
                           href={"#"}
-                          className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                          className="group/megaMenu w-fit text-black hover:text-primary relative"
                         >
                           Business plan EB2
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                         </Link>
                         <Link
                           href={"#"}
-                          className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                          className="group/megaMenu w-fit text-black hover:text-primary relative"
                         >
                           Compliant EB-5
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
@@ -328,22 +358,29 @@ const Navbar = () => {
                         <ul className="space-y-6 mt-10 flex flex-col">
                           <h4 className="mb-7">Start Up</h4>
                           <Link
-                            href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            href="/fueling-the-rise"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
+                          >
+                            Fueling the Rise
+                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
+                          </Link>
+                          <Link
+                            href="/a-pitch-deck"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             A Pitch Deck
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            href="/strategic-business-plan"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Strategic Business Plan
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            href="/strategic-financial-projection"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Strategic Financial projection
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
@@ -353,28 +390,28 @@ const Navbar = () => {
                           <h4 className="mb-7">Small Business</h4>
                           <Link
                             href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Loan Ready Business
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
                             href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             SMB Financial
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
                             href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Real Estate Deck
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
                             href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Business plan for grant
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
@@ -389,21 +426,21 @@ const Navbar = () => {
                         <ul className="space-y-6 mt-10 flex flex-col">
                           <Link
                             href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Privet Company Investment
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
                             href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Strategic Teaser
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
                             href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Independent Value
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
@@ -414,14 +451,14 @@ const Navbar = () => {
                         <ul className="space-y-6 flex flex-col">
                           <Link
                             href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Market Intelligence
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
                             href={"#"}
-                            className="group/megaMenu w-fit text-lg text-black hover:text-primary relative"
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Independent Value
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>

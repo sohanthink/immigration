@@ -34,9 +34,12 @@ const ServiceSection = ({
           <div className="w-3/5">
             <h2 className="mb-16">{title}</h2>
             {description.map((para, idx) => (
-              <p key={idx} className="mb-6">
+              <div
+                key={idx}
+                className="mb-6 text-sm leading-[24px] sm:text-base sm:leading-[28px] lg:leading-[30px]"
+              >
                 {para}
-              </p>
+              </div>
             ))}
           </div>
           <div className="w-2/5">
