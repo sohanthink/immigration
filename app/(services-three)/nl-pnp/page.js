@@ -28,7 +28,7 @@ const demoData = {
   included: [
     "Dedicated Team",
     "Industry Expertise",
-    "Assessment of Applicant’s Profil",
+    "Assessment of Applicant’s Profile",
     "Flat Rate Pricing",
     "Unlimited Revisions",
     "Personalized Business Plan",
