@@ -175,24 +175,97 @@ const Navbar = () => {
                           <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
                             <div className="text-black space-y-6">
                               <Link
-                                href={"/aaip-business-plans"}
+                                href="/aaip-business-plans"
                                 className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
                               >
                                 AAIP-Compliant Business Plan
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
                               <Link
-                                href={"self-employment-business-proposal"}
+                                href="/bc-pnp-business-planning"
                                 className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
                               >
-                                Self-Employment Business Proposal
+                                Entrepreneurial Immigration Strategy – BC PNP
+                                Business Planning
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
+
                               <Link
-                                href={"intra-company-transfer-immigration-plan"}
+                                href="/bc-pnp-entrepreneur-immigration"
                                 className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
                               >
-                                Intra-Company Transfer Immigration Plan
+                                British Columbia PNP – Entrepreneur Immigration:
+                                Regional Business Plan
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+
+                              <Link
+                                href="/bc-pnp-entrepreneur-stream"
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Crafting Your Business Concept for BC’s PNP
+                                Entrepreneur Stream
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+
+                              <Link
+                                href="/plan-mpnp-entrepreneur-pathway"
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Business Plan for Manitoba's MPNP Entrepreneur
+                                Pathway
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+
+                              <Link
+                                href="/concept-mpnp-entrepreneur-pathway"
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Business Concept for Manitoba’s Entrepreneur
+                                Pathway (MPNP)
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+
+                              <Link
+                                href="/nsnp-business-plan"
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Nova Scotia Nominee Program (NSNP) Business Plan
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+
+                              <Link
+                                href="/nwt-nominee-program"
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Business Plan for the Northwest Territories
+                                Nominee Program
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+
+                              <Link
+                                href="/nb-immigration-stream"
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Business Plan for New Brunswick's Immigration
+                                Stream
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+
+                              <Link
+                                href="/nl-pnp"
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                Business Plan for Newfoundland and Labrador PNP
+                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
+                              </Link>
+
+                              <Link
+                                href="/yukon-entrepreneur-stream"
+                                className="group/nestedMenu w-fit block text-lg text-black hover:text-primary relative"
+                              >
+                                YBNP Entrepreneur Stream – Business Plan
+                                Overview
                                 <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
                               </Link>
                             </div>

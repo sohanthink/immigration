@@ -51,7 +51,7 @@ const demoData = {
   ],
   bgImage: imageBg,
 };
-export default function AaipBusinessPlans() {
+export default function NpImmigrationStream() {
   return (
     <>
       <ServiceHeroSection
