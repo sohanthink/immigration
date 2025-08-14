@@ -1,5 +1,5 @@
 import ServiceSection from "@/components/ServiceSection";
-import image from "@/public/services/image4.webp";
+import image from "@/public/services/image10.webp";
 import imageBg from "@/public/services/bg.webp";
 import ServiceHeroSection from "@/components/ServiceHeroSection";
 import HistorySection from "@/components/about/HistorySection";
@@ -9,45 +9,43 @@ import GetQuote from "@/components/GetQuote";
 import HowWeWork from "@/components/HowWeWork";
 
 const demoData = {
-  title: "Canada’s Start-Up Visa Program",
+  title: "Crafting Your Business Concept for BC’s PNP Entrepreneur Stream",
   description: [
-    "Canada continues to stand as a global destination for enterprising innovators. The Start-Up Visa Program invites forward-thinking entrepreneurs with competitive business ideas, aiming to spark job creation and fuel nationwide economic growth.",
-    "In contrast to regional Provincial Nominee Programs for entrepreneurs, Canada’s federal Start-Up Visa Program requires a Letter of Support from a designated organization—such as a venture capital fund, angel investor, or business incubator. (A complete list of designated organizations is available here.)",
-    "Investors sift through numerous business plans and pitches daily. Their standards are high, and their evaluation process is exacting. To stand out—and earn their confidence—you need a strong concept, backed by a sharp, well-crafted business plan or pitch deck.",
-    "Our business plan team brings deep experience tailoring documents for high-stakes audiences. With backgrounds in investment banking, venture capital, and funding organizations, we offer the strategic insight and industry fluency required to craft compelling, investor-ready plans.",
+    "Submitting a strong business concept is a critical component of your registration for the British Columbia Provincial Nominee Program (BCPNP) Entrepreneur Immigration Stream. Evaluated independently from your self-assessment, the business concept can contribute up to 200 points to your total score. Only the highest-ranking applicants receive invitations to apply—making it vital to optimize your score with a compelling and well-prepared concept.",
+    "Our Assessment & Business Concept service is structured to enhance your chances of success through a strategic two-step approach:",
+    "Assessment: We perform a thorough evaluation of your qualifications, offering in-depth feedback and targeted recommendations to help improve your score across all sections.",
+    "Business Concept: Once the strategy is approved by you or your immigration advisor, we craft a refined, submission-ready business concept customized to meet the precise standards of the BCP",
   ],
   image: image,
-  cardHeadingOne: "SUV Business",
-  startingPrice: "C$ 3680",
-  subTitle: "SUV Business Plan",
-  deliveryTime: "10–15 business days",
-  numberOfPages: "Depending on Designated Organization",
-  rushAvailable: false,
-  fourthCard: true,
-  fourthCardHeadingOne: "SUV Pitch Deck",
-  fourthStartingPrice: "C$ 2600",
-  fourthSubTitle: "SUV Pitch Deck",
-  fourthDeliveryTime: "10–15 business days",
-  fourthNumberOfPages: "35-50 slides",
+
+  cardHeadingOne: "Starting Price",
+  startingPrice: "C$ 2200",
+  subTitle: "Days Until First Draft",
+  deliveryTime: "7-10 business days",
+  rushAvailable: true,
+  numberOfPages: "Following BCPNP Guidelines",
+
   cardHeadingTwo: "What You Get:",
-  cardHeadingThree: "What's Included in Pitch Deck:",
   included: [
-    "Business Description",
-    "Industry Analysis",
-    "Market Analysis",
-    "Marketing Plan",
-    "Personnel Plan",
-    "Financial Projections (5 years)",
+    "Dedicated Team",
+    "Industry Expertise",
+    "Assessment of Applicant’s Profil",
+    "Flat Rate Pricing",
+    "Unlimited Revisions",
+    "Personalized Business Plan",
   ],
+
+  cardHeadingThree: "What's Included:",
   steps: [
-    { text: "Executive Summary" },
-    { text: "Market Opportunity" },
-    { text: "The Solution – Service Description" },
-    { text: "Market Approach & Strategy" },
-    { text: "Financials" },
-    { text: "Deal description / Structure / Details" },
-    { text: "High-level snapshot of key figures" },
-    { text: "Description of problem" },
+    { text: "Proposed Ownership Percentage" },
+    { text: "Location of Business" },
+    { text: "Description of Business" },
+    { text: "Business Operations of Proposed Business" },
+    { text: "NAICS of Proposed Business" },
+    { text: "Applicant’s Proposed Job Title" },
+    { text: "NOC of Proposed Job" },
+    { text: "Target Market and Competitive Analysis" },
+    { text: "Personal Investment" },
   ],
   bgImage: imageBg,
 };
@@ -55,13 +53,15 @@ export default function BcPnpEntrepreneurStream() {
   return (
     <>
       <ServiceHeroSection
-        title={"Business Plan for Start-Up Visa Application"}
+        title={
+          "Crafting Your Business Concept for BC’s PNP Entrepreneur Stream"
+        }
         subtitle={
-          "Securing a Start-Up Visa in Canada requires endorsement from an incubator, angel investor, or venture capital group. A clear, compelling business plan is essential to earn their support."
+          "The Business Concept portion of the BC PNP Entrepreneur Immigration registration carries significant weight—contributing 40% to your overall score. Achieving a competitive score is essential to receiving an invitation to apply. Our tailored Assessment & Business Concept service is designed to help you strengthen your concept and maximize your registration score."
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "Business Plan for Start-Up Visa Application",
+          current: "PNP Entrepreneur Stream",
         }}
       />
       <ServiceSection {...demoData} />

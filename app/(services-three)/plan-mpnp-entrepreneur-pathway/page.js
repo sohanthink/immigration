@@ -1,5 +1,5 @@
 import ServiceSection from "@/components/ServiceSection";
-import image from "@/public/services/image4.webp";
+import image from "@/public/services/image11.webp";
 import imageBg from "@/public/services/bg.webp";
 import ServiceHeroSection from "@/components/ServiceHeroSection";
 import HistorySection from "@/components/about/HistorySection";
@@ -9,45 +9,42 @@ import GetQuote from "@/components/GetQuote";
 import HowWeWork from "@/components/HowWeWork";
 
 const demoData = {
-  title: "Canada’s Start-Up Visa Program",
+  title: "Business Plan for Manitoba's MPNP Entrepreneur Pathway",
   description: [
-    "Canada continues to stand as a global destination for enterprising innovators. The Start-Up Visa Program invites forward-thinking entrepreneurs with competitive business ideas, aiming to spark job creation and fuel nationwide economic growth.",
-    "In contrast to regional Provincial Nominee Programs for entrepreneurs, Canada’s federal Start-Up Visa Program requires a Letter of Support from a designated organization—such as a venture capital fund, angel investor, or business incubator. (A complete list of designated organizations is available here.)",
-    "Investors sift through numerous business plans and pitches daily. Their standards are high, and their evaluation process is exacting. To stand out—and earn their confidence—you need a strong concept, backed by a sharp, well-crafted business plan or pitch deck.",
-    "Our business plan team brings deep experience tailoring documents for high-stakes audiences. With backgrounds in investment banking, venture capital, and funding organizations, we offer the strategic insight and industry fluency required to craft compelling, investor-ready plans.",
+    "Manitoba's Provincial Nominee Program (PNP) Entrepreneur Pathway is tailored for experienced investors, business owners, and senior managers seeking to establish or acquire a business in the province.",
+    "Unlike many other PNP streams that begin with temporary residency, the Manitoba MPNP offers a direct route to permanent residency—making it one of the most desirable and competitive options for business immigration. To maximize your chances of success, every document you submit, especially your business plan, must reflect the highest standards of quality and professionalism.",
+    "Our experienced immigration specialists excel at creating concise, persuasive business documentation that strengthens your chances of advancing through the nomination and application process—ultimately helping you achieve your immigration goals. From your initial business concept to the final comprehensive business plan, our team provides expert guidance and unwavering support every step of the way.",
   ],
   image: image,
-  cardHeadingOne: "SUV Business",
-  startingPrice: "C$ 3680",
-  subTitle: "SUV Business Plan",
-  deliveryTime: "10–15 business days",
-  numberOfPages: "Depending on Designated Organization",
-  rushAvailable: false,
-  fourthCard: true,
-  fourthCardHeadingOne: "SUV Pitch Deck",
-  fourthStartingPrice: "C$ 2600",
-  fourthSubTitle: "SUV Pitch Deck",
-  fourthDeliveryTime: "10–15 business days",
-  fourthNumberOfPages: "35-50 slides",
+
+  cardHeadingOne: "Starting Price",
+  startingPrice: "C$ 2200",
+  subTitle: "Days Until First Draft",
+  deliveryTime: "7-10 business days",
+  rushAvailable: true,
+  numberOfPages: "25 – 35 pages",
+
   cardHeadingTwo: "What You Get:",
-  cardHeadingThree: "What's Included in Pitch Deck:",
   included: [
-    "Business Description",
-    "Industry Analysis",
-    "Market Analysis",
-    "Marketing Plan",
-    "Personnel Plan",
-    "Financial Projections (5 years)",
+    "Dedicated Team",
+    "Industry Expertise",
+    "Assessment of Applicant’s Profil",
+    "Flat Rate Pricing",
+    "Unlimited Revisions",
+    "Personalized Business Plan",
   ],
+
+  cardHeadingThree: "What's Included:",
   steps: [
     { text: "Executive Summary" },
-    { text: "Market Opportunity" },
-    { text: "The Solution – Service Description" },
-    { text: "Market Approach & Strategy" },
-    { text: "Financials" },
-    { text: "Deal description / Structure / Details" },
-    { text: "High-level snapshot of key figures" },
-    { text: "Description of problem" },
+    { text: "Business Profile" },
+    { text: "Market Profile" },
+    { text: "General Resource Requirement" },
+    { text: "Human Resource Requirement" },
+    { text: "Financial Resource Requirement" },
+    { text: "Critical Risk Factors" },
+    { text: "Implementation Timeline" },
+    { text: "Financials (3 years)" },
   ],
   bgImage: imageBg,
 };
@@ -55,13 +52,13 @@ export default function PlanMpnpEntrepreneurPathway() {
   return (
     <>
       <ServiceHeroSection
-        title={"Business Plan for Start-Up Visa Application"}
+        title={"Business Plan for Manitoba's MPNP Entrepreneur Pathway"}
         subtitle={
-          "Securing a Start-Up Visa in Canada requires endorsement from an incubator, angel investor, or venture capital group. A clear, compelling business plan is essential to earn their support."
+          "Through the Manitoba Provincial Nominee Program (MPNP), entrepreneurs and investors have the opportunity to establish a new business or acquire an existing one within the province. As a highly competitive stream, the Entrepreneur Pathway demands a comprehensive and well-crafted business plan to support a successful application."
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "Business Plan for Start-Up Visa Application",
+          current: "Business Plan for Manitoba's MPNP Entrepreneur Pathway",
         }}
       />
       <ServiceSection {...demoData} />

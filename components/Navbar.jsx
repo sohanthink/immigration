@@ -172,7 +172,7 @@ const Navbar = () => {
                           </span>
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           {/* Nested Menu */}
-                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
+                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all h-96 overflow-y-auto">
                             <div className="text-black space-y-6">
                               <Link
                                 href="/aaip-business-plans"

@@ -1,5 +1,5 @@
 import ServiceSection from "@/components/ServiceSection";
-import image from "@/public/services/image4.webp";
+import image from "@/public/services/image12.webp";
 import imageBg from "@/public/services/bg.webp";
 import ServiceHeroSection from "@/components/ServiceHeroSection";
 import HistorySection from "@/components/about/HistorySection";
@@ -9,45 +9,44 @@ import GetQuote from "@/components/GetQuote";
 import HowWeWork from "@/components/HowWeWork";
 
 const demoData = {
-  title: "Canada’s Start-Up Visa Program",
+  title: "Business Concept for Manitoba’s Entrepreneur Pathway (MPNP)",
   description: [
-    "Canada continues to stand as a global destination for enterprising innovators. The Start-Up Visa Program invites forward-thinking entrepreneurs with competitive business ideas, aiming to spark job creation and fuel nationwide economic growth.",
-    "In contrast to regional Provincial Nominee Programs for entrepreneurs, Canada’s federal Start-Up Visa Program requires a Letter of Support from a designated organization—such as a venture capital fund, angel investor, or business incubator. (A complete list of designated organizations is available here.)",
-    "Investors sift through numerous business plans and pitches daily. Their standards are high, and their evaluation process is exacting. To stand out—and earn their confidence—you need a strong concept, backed by a sharp, well-crafted business plan or pitch deck.",
-    "Our business plan team brings deep experience tailoring documents for high-stakes audiences. With backgrounds in investment banking, venture capital, and funding organizations, we offer the strategic insight and industry fluency required to craft compelling, investor-ready plans.",
+    "The Entrepreneur Pathway under Manitoba’s Provincial Nominee Program (MPNP) starts with an Expression of Interest (EOI), which consists of two critical components: a self-assessment and a business concept. These factors are used to calculate your ranking, and only top-ranking candidates will receive invitations to submit a formal application.",
+    "Our comprehensive two-step Assessment & Business Concept service is designed to elevate the strength of your submission. In Step One, we conduct an in-depth evaluation and deliver a detailed report with actionable insights to help optimize your score. Upon review and approval of the feedback, Step Two begins—where we craft a compelling, fully developed business concept aligned with MPNP requirements. Ensuring consistency between your EOI submission and final application is vital, as discrepancies without valid justification may result in refusal.",
+    "At Immigration, our Assessment & Business Concept service is designed to strengthen your business proposal and boost your EOI score, laying the groundwork for a smooth immigration journey. Upon approval of your Expression of Interest, we seamlessly transition to developing a fully aligned.",
   ],
   image: image,
-  cardHeadingOne: "SUV Business",
-  startingPrice: "C$ 3680",
-  subTitle: "SUV Business Plan",
-  deliveryTime: "10–15 business days",
-  numberOfPages: "Depending on Designated Organization",
-  rushAvailable: false,
-  fourthCard: true,
-  fourthCardHeadingOne: "SUV Pitch Deck",
-  fourthStartingPrice: "C$ 2600",
-  fourthSubTitle: "SUV Pitch Deck",
-  fourthDeliveryTime: "10–15 business days",
-  fourthNumberOfPages: "35-50 slides",
+  cardHeadingOne: "Starting Price",
+  startingPrice: "C$ 2200",
+  subTitle: "Days Until First Draft",
+  deliveryTime: "7-10 business days",
+  rushAvailable: true,
+  numberOfPages: "Following MPNP Guidelines",
+
   cardHeadingTwo: "What You Get:",
-  cardHeadingThree: "What's Included in Pitch Deck:",
   included: [
-    "Business Description",
-    "Industry Analysis",
-    "Market Analysis",
-    "Marketing Plan",
-    "Personnel Plan",
-    "Financial Projections (5 years)",
+    "Dedicated Team",
+    "Industry Expertise",
+    "Assessment of Applicant’s Profil",
+    "Flat Rate Pricing",
+    "Unlimited Revisions",
+    "Personalized Business Plan",
   ],
+
+  cardHeadingThree: "What's Included:",
   steps: [
-    { text: "Executive Summary" },
-    { text: "Market Opportunity" },
-    { text: "The Solution – Service Description" },
-    { text: "Market Approach & Strategy" },
-    { text: "Financials" },
-    { text: "Deal description / Structure / Details" },
-    { text: "High-level snapshot of key figures" },
-    { text: "Description of problem" },
+    {
+      text: "Describe the business opportunity you have identified in Manitoba",
+    },
+    {
+      text: "Describe the research you undertook that convinced you this was a viable business opportunity in Manitoba",
+    },
+    { text: "Describe how you will market your products" },
+    { text: "Identify critical resource requirements" },
+    { text: "Describe your implementation timelines" },
+    { text: "Describe critical risk factors" },
+    { text: "Describe additional research required" },
+    { text: "Describe how your business would benefit Manitoba" },
   ],
   bgImage: imageBg,
 };
@@ -55,13 +54,13 @@ export default function ConceptMpnpEntrepreneurPathway() {
   return (
     <>
       <ServiceHeroSection
-        title={"Business Plan for Start-Up Visa Application"}
+        title={"Business Concept for Manitoba’s Entrepreneur Pathway (MPNP)"}
         subtitle={
-          "Securing a Start-Up Visa in Canada requires endorsement from an incubator, angel investor, or venture capital group. A clear, compelling business plan is essential to earn their support."
+          "Our Business Concept service for the Manitoba Provincial Nominee Program (MPNP) Entrepreneur Pathway is tailored to support applicants in developing high-quality, strategically focused proposals. With expert guidance, we help you optimize your assessment score and create a robust, well-organized business concept that aligns with the MPNP’s core objectives."
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "Business Plan for Start-Up Visa Application",
+          current: "Business Concept for Manitoba’s Entrepreneur Pathway",
         }}
       />
       <ServiceSection {...demoData} />

@@ -1,5 +1,5 @@
 import ServiceSection from "@/components/ServiceSection";
-import image from "@/public/services/image4.webp";
+import image from "@/public/services/image8.webp";
 import imageBg from "@/public/services/bg.webp";
 import ServiceHeroSection from "@/components/ServiceHeroSection";
 import HistorySection from "@/components/about/HistorySection";
@@ -9,59 +9,57 @@ import GetQuote from "@/components/GetQuote";
 import HowWeWork from "@/components/HowWeWork";
 
 const demoData = {
-  title: "Canada’s Start-Up Visa Program",
+  title: "Entrepreneurial Immigration Strategy – BC PNP Business Planning",
   description: [
-    "Canada continues to stand as a global destination for enterprising innovators. The Start-Up Visa Program invites forward-thinking entrepreneurs with competitive business ideas, aiming to spark job creation and fuel nationwide economic growth.",
-    "In contrast to regional Provincial Nominee Programs for entrepreneurs, Canada’s federal Start-Up Visa Program requires a Letter of Support from a designated organization—such as a venture capital fund, angel investor, or business incubator. (A complete list of designated organizations is available here.)",
-    "Investors sift through numerous business plans and pitches daily. Their standards are high, and their evaluation process is exacting. To stand out—and earn their confidence—you need a strong concept, backed by a sharp, well-crafted business plan or pitch deck.",
-    "Our business plan team brings deep experience tailoring documents for high-stakes audiences. With backgrounds in investment banking, venture capital, and funding organizations, we offer the strategic insight and industry fluency required to craft compelling, investor-ready plans.",
+    "Prospective immigrants looking to launch a business in British Columbia under the BC Provincial Nominee Program (BCPNP) – Base Category must complete a two-stage application process",
+    "The initial stage requires submitting an Expression of Interest (EOI), which must include a detailed Business Concept. This component plays a pivotal role in the evaluation process, representing 40% of the total score at this phase. A clear, compelling concept greatly enhances your chances of progressing to the next round.",
+    "Applicants whose EOIs receive high scores are issued an Invitation to Apply (ITA), triggering the next phase: submission of a comprehensive business plan. This plan builds on the initial Business Concept, providing detailed justification and supporting evidence for the original claims. It serves as the applicant’s opportunity to present a persuasive case for the viability and economic contribution of their proposed venture in British Columbia.",
   ],
   image: image,
-  cardHeadingOne: "SUV Business",
-  startingPrice: "C$ 3680",
-  subTitle: "SUV Business Plan",
-  deliveryTime: "10–15 business days",
-  numberOfPages: "Depending on Designated Organization",
-  rushAvailable: false,
-  fourthCard: true,
-  fourthCardHeadingOne: "SUV Pitch Deck",
-  fourthStartingPrice: "C$ 2600",
-  fourthSubTitle: "SUV Pitch Deck",
-  fourthDeliveryTime: "10–15 business days",
-  fourthNumberOfPages: "35-50 slides",
+
+  cardHeadingOne: "Starting Price",
+  startingPrice: "C$ 2200",
+  subTitle: "Days Until First Draft",
+  deliveryTime: "7-10 business days",
+  rushAvailable: true,
+  numberOfPages: "10+ appendixes",
+
   cardHeadingTwo: "What You Get:",
-  cardHeadingThree: "What's Included in Pitch Deck:",
   included: [
-    "Business Description",
-    "Industry Analysis",
-    "Market Analysis",
-    "Marketing Plan",
-    "Personnel Plan",
-    "Financial Projections (5 years)",
+    "Dedicated Team",
+    "Industry Expertise",
+    "Personalized Business Plan",
+    "Flat Rate Pricing",
+    "Professional Graphic Design",
   ],
+
+  cardHeadingThree: "What's Included:",
   steps: [
-    { text: "Executive Summary" },
-    { text: "Market Opportunity" },
-    { text: "The Solution – Service Description" },
-    { text: "Market Approach & Strategy" },
-    { text: "Financials" },
-    { text: "Deal description / Structure / Details" },
-    { text: "High-level snapshot of key figures" },
-    { text: "Description of problem" },
+    { text: "Business Overview" },
+    { text: "Company and Ownership Structure" },
+    { text: "Management Structure" },
+    { text: "Operations" },
+    { text: "Staffing" },
+    { text: "Market Analysis and Risk Management" },
+    { text: "Governing Laws, Regulations and Licensing" },
+    { text: "Appendixes" },
   ],
   bgImage: imageBg,
 };
+
 export default function BcPnpBusinessPlanning() {
   return (
     <>
       <ServiceHeroSection
-        title={"Business Plan for Start-Up Visa Application"}
+        title={
+          "Entrepreneurial Immigration Strategy – BC PNP Business Planning"
+        }
         subtitle={
-          "Securing a Start-Up Visa in Canada requires endorsement from an incubator, angel investor, or venture capital group. A clear, compelling business plan is essential to earn their support."
+          "Applicants to the British Columbia Provincial Nominee Program (BC PNP) must submit a comprehensive business plan that outlines their proposal with clear detail and well-supported justification. To meet program standards and maximize the likelihood of approval, the plan must follow established guidelines and present a compelling, professionally crafted case."
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "Business Plan for Start-Up Visa Application",
+          current: "Entrepreneurial Immigration Strategy",
         }}
       />
       <ServiceSection {...demoData} />
