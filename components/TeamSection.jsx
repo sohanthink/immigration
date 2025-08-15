@@ -40,7 +40,9 @@ const TeamSection = ({ about = false }) => {
         {/* Header Section */}
         <div
           className={`${
-            about ? "flex justify-between items-end max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:mb-8 max-sm:gap-5" : "text-center"
+            about
+              ? "flex justify-between items-end max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:mb-8 max-sm:gap-5"
+              : "text-center"
           } mb-16`}
         >
           <div>

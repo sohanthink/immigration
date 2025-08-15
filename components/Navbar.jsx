@@ -432,21 +432,21 @@ const Navbar = () => {
                         <h4 className="bg-white px-5 py-1">M&A:</h4>
                         <ul className="space-y-6 mt-10 flex flex-col">
                           <Link
-                            href={"#"}
+                            href={"privet-company-investment"}
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Privet Company Investment
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
+                            href={"strategic-teaser"}
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Strategic Teaser
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
+                            href={"independent-value"}
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Independent Value
@@ -457,14 +457,14 @@ const Navbar = () => {
                       <div>
                         <ul className="space-y-6 flex flex-col">
                           <Link
-                            href={"#"}
+                            href={"market-intelligence"}
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Market Intelligence
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
+                            href={"independent-value"}
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Independent Value
