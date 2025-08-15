@@ -17,12 +17,18 @@ export default function Careers() {
         <div className="w-full sm:flex justify-between items-start p-4">
           {/* Logo */}
           <div className="xl:p-7 p-5 border flex justify-center items-center border-gray rounded-4xl">
-            <Image src={demoLogo} alt="Logo" className="xl:w-52 xl:h-52 w-28 h-28"/>
+            <Image
+              src={demoLogo}
+              alt="Logo"
+              className="xl:w-52 xl:h-52 w-28 h-28"
+            />
           </div>
 
           {/* Social Links */}
           <div>
-            <h3 className="max-sm:mt-10 max-sm:text-center">Join with Us Now</h3>
+            <h3 className="max-sm:mt-10 max-sm:text-center">
+              Join with Us Now
+            </h3>
             <div className="flex max-sm:justify-center gap-3 mt-5">
               <Link
                 href="#"
@@ -58,7 +64,9 @@ export default function Careers() {
             talented individuals <br /> to join our team in the future.
           </p>
 
-          <button className="primary-button xl:mt-120 mt-16">BACK TO HOME PAGE</button>
+          <button className="primary-button xl:mt-120 mt-16">
+            BACK TO HOME PAGE
+          </button>
         </div>
       </div>
     </section>

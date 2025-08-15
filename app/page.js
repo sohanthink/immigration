@@ -16,7 +16,7 @@ export default function Home() {
       <Banner />
       <Immigration />
       <Trusted />
-      <VisaSolutions/>
+      <VisaSolutions />
       <TeamSection />
       <PartnerProgram />
       <WhyChooseUs />

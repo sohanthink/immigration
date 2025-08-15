@@ -17,9 +17,9 @@ const ImageWithText = ({ title, image, steps }) => {
           <h2>{title}</h2>
           <div className="space-y-6 mt-10">
             {steps.map((step, idx) => (
-              <p key={idx} className="flex items-center gap-2 text-gray">
+              <div key={idx} className="text-gray text-sm sm:text-base">
                 {step.text}
-              </p>
+              </div>
             ))}
           </div>
         </div>

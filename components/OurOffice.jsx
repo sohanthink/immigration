@@ -79,7 +79,9 @@ const OurOffice = () => {
                   } xl:text-4xl md:text-2xl text-xl`}
                 />
               </p>
-              <h4 className="text-black xl:mt-10 mt-6 xl:mb-7 mb-5">{office.name}</h4>
+              <h4 className="text-black xl:mt-10 mt-6 xl:mb-7 mb-5">
+                {office.name}
+              </h4>
               <p className="text-gray">{office.location}</p>
             </div>
           ))}
