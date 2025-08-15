@@ -320,28 +320,28 @@ const Navbar = () => {
                       </h4>
                       <ul className="space-y-6 mt-10 flex flex-col">
                         <Link
-                          href={"#"}
+                          href={"e-2-business-plan"}
                           className="group/megaMenu w-fit text-black hover:text-primary relative"
                         >
                           E-2 Business plan
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                         </Link>
                         <Link
-                          href={"#"}
+                          href={"business-plan-l-1"}
                           className="group/megaMenu w-fit text-black hover:text-primary relative"
                         >
                           Business plan L - 1
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                         </Link>
                         <Link
-                          href={"#"}
+                          href={"business-plan-eb2"}
                           className="group/megaMenu w-fit text-black hover:text-primary relative"
                         >
                           Business plan EB2
                           <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                         </Link>
                         <Link
-                          href={"#"}
+                          href={"compliant-eb-5"}
                           className="group/megaMenu w-fit text-black hover:text-primary relative"
                         >
                           Compliant EB-5
@@ -389,28 +389,35 @@ const Navbar = () => {
                         <ul className="space-y-6 mt-10 flex flex-col">
                           <h4 className="mb-7">Small Business</h4>
                           <Link
-                            href={"#"}
+                            href={"/blueprints-for-small-business"}
+                            className="group/megaMenu w-fit text-black hover:text-primary relative"
+                          >
+                            Blueprints for Small Business
+                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
+                          </Link>
+                          <Link
+                            href={"/loan-ready-business"}
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Loan Ready Business
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
+                            href={"/smb-financial"}
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             SMB Financial
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
+                            href={"/real-estate-deck"}
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Real Estate Deck
                             <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
                           </Link>
                           <Link
-                            href={"#"}
+                            href={"/business-plan-for-grant"}
                             className="group/megaMenu w-fit text-black hover:text-primary relative"
                           >
                             Business plan for grant
