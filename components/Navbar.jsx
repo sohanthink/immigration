@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
 import Link from "next/link";
 import logo from "@/public/logo.png";
@@ -9,9 +9,63 @@ import { GoChevronRight } from "react-icons/go";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSubmenu, setActiveSubmenu] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const menuRef = useRef(null);
+
+  // Handle responsive behavior
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 768;
+      setIsMobile(mobile);
+
+      // Close mobile menu when switching to desktop
+      if (!mobile) {
+        setIsMenuOpen(false);
+        setActiveSubmenu(null);
+      }
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Handle clicks outside menu
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+        setActiveSubmenu(null);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setActiveSubmenu(null);
+  };
+
+  const toggleSubmenu = (menuName) => {
+    setActiveSubmenu(activeSubmenu === menuName ? null : menuName);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+    setActiveSubmenu(null);
   };
 
   const menuItems = [
@@ -32,32 +86,168 @@ const Navbar = () => {
     { name: "BLOG", href: "/blogs" },
   ];
 
+  const servicesData = {
+    canadaImmigration: [
+      {
+        title: "Business Idea Selection",
+        items: [
+          { name: "Business Concept Exploration", href: "/business-concept" },
+          { name: "Strategic Assessment", href: "/baseline-discovery" },
+          { name: "Strategic Research", href: "/strategic-research" },
+        ],
+      },
+      {
+        title: "Start-Up Programs",
+        items: [
+          {
+            name: "Start-Up Visa Application",
+            href: "/start-up-visa-application",
+          },
+          {
+            name: "Self-Employment Business Proposal",
+            href: "/self-employment-business-proposal",
+          },
+          {
+            name: "Intra-Company Transfer Immigration Plan",
+            href: "/intra-company-transfer-immigration-plan",
+          },
+        ],
+      },
+      {
+        title: "Provincial Programs",
+        items: [
+          {
+            name: "AAIP-Compliant Business Plan",
+            href: "/aaip-business-plans",
+          },
+          {
+            name: "BC PNP Business Planning",
+            href: "/bc-pnp-business-planning",
+          },
+          {
+            name: "BC PNP Regional Business Plan",
+            href: "/bc-pnp-entrepreneur-immigration",
+          },
+          {
+            name: "BC PNP Entrepreneur Stream",
+            href: "/bc-pnp-entrepreneur-stream",
+          },
+          {
+            name: "Manitoba MPNP Business Plan",
+            href: "/plan-mpnp-entrepreneur-pathway",
+          },
+          {
+            name: "Manitoba MPNP Business Concept",
+            href: "/concept-mpnp-entrepreneur-pathway",
+          },
+          {
+            name: "Nova Scotia NSNP Business Plan",
+            href: "/nsnp-business-plan",
+          },
+          {
+            name: "Northwest Territories Business Plan",
+            href: "/nwt-nominee-program",
+          },
+          {
+            name: "New Brunswick Immigration Stream",
+            href: "/nb-immigration-stream",
+          },
+          { name: "Newfoundland and Labrador PNP", href: "/nl-pnp" },
+          {
+            name: "Yukon Entrepreneur Stream",
+            href: "/yukon-entrepreneur-stream",
+          },
+        ],
+      },
+      {
+        title: "Work Permits",
+        items: [
+          {
+            name: "LMIA Owner-Operator Stream",
+            href: "/lmia-owner-operator-stream",
+          },
+          {
+            name: "C10 Significant Benefit Work Permit",
+            href: "/c10-significant-benefit-work-permit",
+          },
+          {
+            name: "C11 Entrepreneur Work Permit",
+            href: "/c11-entrepreneur-work-permit",
+          },
+          {
+            name: "FTA-Based Entrepreneurial",
+            href: "/fta-based-entrepreneurial",
+          },
+        ],
+      },
+    ],
+    usaImmigration: [
+      { name: "E-2 Business plan", href: "/e-2-business-plan" },
+      { name: "Business plan L-1", href: "/business-plan-l-1" },
+      { name: "Business plan EB2", href: "/business-plan-eb2" },
+      { name: "Compliant EB-5", href: "/compliant-eb-5" },
+    ],
+    advisory: {
+      startUp: [
+        { name: "Fueling the Rise", href: "/fueling-the-rise" },
+        { name: "A Pitch Deck", href: "/a-pitch-deck" },
+        { name: "Strategic Business Plan", href: "/strategic-business-plan" },
+        {
+          name: "Strategic Financial projection",
+          href: "/strategic-financial-projection",
+        },
+      ],
+      smallBusiness: [
+        {
+          name: "Blueprints for Small Business",
+          href: "/blueprints-for-small-business",
+        },
+        { name: "Loan Ready Business", href: "/loan-ready-business" },
+        { name: "SMB Financial", href: "/smb-financial" },
+        { name: "Real Estate Deck", href: "/real-estate-deck" },
+        { name: "Business plan for grant", href: "/business-plan-for-grant" },
+      ],
+    },
+    ma: [
+      {
+        name: "Private Company Investment",
+        href: "/privet-company-investment",
+      },
+      { name: "Strategic Teaser", href: "/strategic-teaser" },
+      { name: "Independent Value", href: "/independent-value" },
+      { name: "Market Intelligence", href: "/market-intelligence" },
+    ],
+  };
+
   return (
-    <nav className="sticky w-full top-0 z-50 duration-50 bg-dark">
-      <div className="container mx-auto px-2">
-        <div className="flex justify-between items-center h-20">
+    <nav className="sticky w-full top-0 z-50 duration-50 bg-dark" ref={menuRef}>
+      <div className="container mx-auto px-4 lg:px-2">
+        <div className="flex justify-between items-center h-16 md:h-20">
           {/* Logo - Left Side */}
-          <Link href="/" className="flex-shrink-0 flex items-center group">
+          <Link
+            href="/"
+            className="flex-shrink-0 flex items-center group z-50 relative"
+          >
             <div className="flex items-center space-x-3 transform transition-all duration-300 group-hover:scale-105">
               <div className="relative">
                 <Image
                   src={logo}
                   alt="logo"
-                  width={70}
-                  height={70}
-                  className="shadow-lg hover:shadow-2xl transition-all duration-300"
+                  width={60}
+                  height={60}
+                  className="md:w-[70px] md:h-[70px] shadow-lg hover:shadow-2xl transition-all duration-300"
                 />
               </div>
             </div>
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex ml-20 space-x-6">
+          <div className="hidden lg:flex ml-20 space-x-6">
             {menuItems.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
                   href={item.href}
-                  className="px-4 py-12 font-semibold text-sm text-white flex items-center gap-1"
+                  className="px-4 py-12 font-semibold text-sm text-white flex items-center gap-1 hover:text-gray-300 transition-colors duration-300"
                 >
                   {item.name}
                   {item.submenu && <FaChevronDown className="text-xs" />}
@@ -65,16 +255,16 @@ const Navbar = () => {
 
                 {/* Dropdown */}
                 {item.submenu && (
-                  <div className="absolute left-3 top-20 mt-1 w-48 bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-opacity duration-300">
+                  <div className="absolute left-3 top-20 mt-1 w-48 bg-white shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 rounded-lg overflow-hidden">
                     <ul className="py-2">
                       {item.submenu.map((sub) => (
                         <li key={sub.name}>
                           <Link
                             href={sub.href}
-                            className="group/submenu block px-4 py-2 text-sm text-gray-800 hover:text-primary hover:bg-gray-50 relative"
+                            className="group/submenu block px-4 py-2 text-sm text-gray-800 hover:text-primary hover:bg-gray-50 relative transition-colors duration-200"
                           >
                             {sub.name}
-                            <span className="absolute left-4 bottom-0 w-7 h-[1px] bg-primary opacity-0 group-hover/submenu:w-4/5 group-hover:opacity-100 transition-all duration-700"></span>
+                            <span className="absolute left-4 bottom-0 w-7 h-[1px] bg-primary opacity-0 group-hover/submenu:w-4/5 group-hover/submenu:opacity-100 transition-all duration-700"></span>
                           </Link>
                         </li>
                       ))}
@@ -83,395 +273,145 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            {/* Mega Menu for SERVICES */}
+
+            {/* Desktop Services Mega Menu */}
             <div className="group">
               <Link
                 href={"#"}
-                className="px-4 py-12 font-semibold text-sm text-white flex items-center gap-1"
+                className="px-4 py-12 font-semibold text-sm text-white flex items-center gap-1 hover:text-gray-300 transition-colors duration-300"
               >
                 SERVICES <FaChevronDown className="text-xs" />
               </Link>
 
-              {/* Mega Menu */}
-              <div className="absolute mt-20 z-0 inset-0 w-full h-[80vh] bg-[#EEEEEE] shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6">
-                <div className="container mx-auto px-2 grid grid-cols-2 gap-10">
+              {/* Mega Menu*/}
+              <div className="absolute mt-20 z-40 inset-0 w-full h-[80vh] bg-[#EEEEEE] shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition-all duration-300 p-6 overflow-y-auto">
+                <div className="container mx-auto px-2 grid grid-cols-1 xl:grid-cols-2 gap-10">
                   <div>
                     {/* Canada Immigration */}
                     <div>
-                      <h4 className="bg-white px-5 py-1 inline-block">
+                      <h4 className="bg-white px-5 py-2 inline-block rounded mb-6 font-semibold">
                         Canada Immigration:
                       </h4>
-                      <ul className="space-y-6 mt-10 flex flex-col">
-                        <li className="group/megaMenu w-fit text-black hover:text-primary relative cursor-pointer">
-                          <span className="flex items-center gap-5">
-                            Business Idea Selection <GoChevronRight />
-                          </span>
-                          <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          {/* Nested Menu */}
-                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
-                            <div className="text-black space-y-6">
-                              <Link
-                                href={"/business-concept"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Business Concept Exploration
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                              <Link
-                                href={"baseline-discovery"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Strategic Assessment
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                              <Link
-                                href={"strategic-research"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Strategic Research ...
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
+                      <div className="space-y-6 ml-4">
+                        {servicesData.canadaImmigration.map(
+                          (category, index) => (
+                            <div
+                              key={index}
+                              className="group/category relative w-fit"
+                            >
+                              <div className="flex items-center gap-2 cursor-pointer">
+                                <h5 className="font-semibold text-gray-800 text-lg group-hover/category:text-primary transition-colors duration-300">
+                                  {category.title}
+                                </h5>
+                                <GoChevronRight className="text-sm transform group-hover/category:rotate-90 transition-transform duration-300" />
+                              </div>
+
+                              {/* Hover menu */}
+                              <div className="absolute left-full top-0 w-96 bg-white shadow-xl border border-gray-200 rounded-lg p-4 opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-300 z-50">
+                                <h6 className="font-semibold text-primary mb-3 text-base border-b border-gray-100 pb-2">
+                                  {category.title}
+                                </h6>
+                                <ul className="space-y-2">
+                                  {category.items.map((item) => (
+                                    <li key={item.name}>
+                                      <Link
+                                        href={item.href}
+                                        className="group/item block px-3 py-2 text-sm text-gray-700 hover:text-primary hover:bg-gray-50 rounded-md relative transition-all duration-200"
+                                      >
+                                        {item.name}
+                                        <span className="absolute left-3 bottom-1 w-4 h-[1px] bg-primary opacity-0 group-hover/item:w-[calc(100%-24px)] group-hover/item:opacity-100 transition-all duration-500 ease-in-out"></span>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
                             </div>
-                          </div>
-                        </li>
-                        <li className="group/megaMenu w-fit text-black hover:text-primary relative">
-                          <span className="flex items-center gap-5">
-                            Business Idea Selection <GoChevronRight />
-                          </span>
-                          <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          {/* Nested Menu */}
-                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
-                            <div className="text-black space-y-6">
-                              <Link
-                                href={"/start-up-visa-application"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Start-Up Visa Application
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                              <Link
-                                href={"self-employment-business-proposal"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Self-Employment Business Proposal
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                              <Link
-                                href={"intra-company-transfer-immigration-plan"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Intra-Company Transfer Immigration Plan
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="group/megaMenu w-fit text-black hover:text-primary relative">
-                          <span className="flex items-center gap-5">
-                            Business Idea Selection <GoChevronRight />
-                          </span>
-                          <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          {/* Nested Menu */}
-                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all h-96 overflow-y-auto">
-                            <div className="text-black space-y-6">
-                              <Link
-                                href="/aaip-business-plans"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                AAIP-Compliant Business Plan
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                              <Link
-                                href="/bc-pnp-business-planning"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Entrepreneurial Immigration Strategy – BC PNP
-                                Business Planning
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-
-                              <Link
-                                href="/bc-pnp-entrepreneur-immigration"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                British Columbia PNP – Entrepreneur Immigration:
-                                Regional Business Plan
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-
-                              <Link
-                                href="/bc-pnp-entrepreneur-stream"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Crafting Your Business Concept for BC’s PNP
-                                Entrepreneur Stream
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-
-                              <Link
-                                href="/plan-mpnp-entrepreneur-pathway"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Business Plan for Manitoba's MPNP Entrepreneur
-                                Pathway
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-
-                              <Link
-                                href="/concept-mpnp-entrepreneur-pathway"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Business Concept for Manitoba’s Entrepreneur
-                                Pathway (MPNP)
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-
-                              <Link
-                                href="/nsnp-business-plan"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Nova Scotia Nominee Program (NSNP) Business Plan
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-
-                              <Link
-                                href="/nwt-nominee-program"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Business Plan for the Northwest Territories
-                                Nominee Program
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-
-                              <Link
-                                href="/nb-immigration-stream"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Business Plan for New Brunswick's Immigration
-                                Stream
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-
-                              <Link
-                                href="/nl-pnp"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                Business Plan for Newfoundland and Labrador PNP
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-
-                              <Link
-                                href="/yukon-entrepreneur-stream"
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                YBNP Entrepreneur Stream – Business Plan
-                                Overview
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                            </div>
-                          </div>
-                        </li>
-                        <li className="group/megaMenu w-fit text-black hover:text-primary relative">
-                          <span className="flex items-center gap-5">
-                            Business Idea Selection <GoChevronRight />
-                          </span>
-                          <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          {/* Nested Menu */}
-                          <div className="absolute left-full top-0 ml-2 min-w-96 bg-white shadow-md p-3 opacity-0 group-hover/megaMenu:opacity-100 invisible group-hover/megaMenu:visible transition-all">
-                            <div className="text-black space-y-6">
-                              <Link
-                                href={"/lmia-owner-operator-stream"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                LMIA Owner-Operator Stream
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                              <Link
-                                href={"/c10-significant-benefit-work-permit"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                C10 Significant Benefit Work Permit
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                              <Link
-                                href={"/c11-entrepreneur-work-permit"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                C11 Entrepreneur Work Permit
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                              <Link
-                                href={"/fta-based-entrepreneurial"}
-                                className="group/nestedMenu w-fit block text-black hover:text-primary relative"
-                              >
-                                FTA-Based Entrepreneurial
-                                <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/nestedMenu:w-full transition-all duration-700 ease-in-out"></span>
-                              </Link>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
+                          )
+                        )}
+                      </div>
                     </div>
 
                     {/* USA Immigration */}
-                    <div className="mt-120">
-                      <h4 className="bg-white px-5 py-1 inline-block">
+                    <div className="mt-12">
+                      <h4 className="bg-white px-5 py-2 inline-block rounded mb-6 font-semibold">
                         USA Immigration:
                       </h4>
-                      <ul className="space-y-6 mt-10 flex flex-col">
-                        <Link
-                          href={"e-2-business-plan"}
-                          className="group/megaMenu w-fit text-black hover:text-primary relative"
-                        >
-                          E-2 Business plan
-                          <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                        </Link>
-                        <Link
-                          href={"business-plan-l-1"}
-                          className="group/megaMenu w-fit text-black hover:text-primary relative"
-                        >
-                          Business plan L - 1
-                          <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                        </Link>
-                        <Link
-                          href={"business-plan-eb2"}
-                          className="group/megaMenu w-fit text-black hover:text-primary relative"
-                        >
-                          Business plan EB2
-                          <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                        </Link>
-                        <Link
-                          href={"compliant-eb-5"}
-                          className="group/megaMenu w-fit text-black hover:text-primary relative"
-                        >
-                          Compliant EB-5
-                          <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                        </Link>
+                      <ul className="space-y-6 ml-4">
+                        {servicesData.usaImmigration.map((item) => (
+                          <li key={item.name}>
+                            <Link
+                              href={item.href}
+                              className="group/megaMenu text-black w-fit hover:text-primary relative transition-colors duration-300 block"
+                            >
+                              {item.name}
+                              <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
+                            </Link>
+                          </li>
+                        ))}
                       </ul>
                     </div>
                   </div>
 
                   <div>
+                    {/* Advisory */}
                     <div>
-                      <h4 className="bg-white px-5 py-1">Advisory:</h4>
-                      <div className="grid grid-cols-2 gap-10">
-                        <ul className="space-y-6 mt-10 flex flex-col">
-                          <h4 className="mb-7">Start Up</h4>
-                          <Link
-                            href="/fueling-the-rise"
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Fueling the Rise
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href="/a-pitch-deck"
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            A Pitch Deck
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href="/strategic-business-plan"
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Strategic Business Plan
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href="/strategic-financial-projection"
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Strategic Financial projection
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                        </ul>
-                        <ul className="space-y-6 mt-10 flex flex-col">
-                          <h4 className="mb-7">Small Business</h4>
-                          <Link
-                            href={"/blueprints-for-small-business"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Blueprints for Small Business
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href={"/loan-ready-business"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Loan Ready Business
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href={"/smb-financial"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            SMB Financial
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href={"/real-estate-deck"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Real Estate Deck
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href={"/business-plan-for-grant"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Business plan for grant
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                        </ul>
+                      <h4 className="bg-white px-5 py-2 inline-block rounded mb-6 font-semibold">
+                        Advisory:
+                      </h4>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                          <h4>Start Up</h4>
+                          <ul className="space-y-6 mt-5">
+                            {servicesData.advisory.startUp.map((item) => (
+                              <li key={item.name}>
+                                <Link
+                                  href={item.href}
+                                  className="group/megaMenu w-fit text-black hover:text-primary relative transition-colors duration-300 block"
+                                >
+                                  {item.name}
+                                  <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                        <div>
+                          <h4>Small Business</h4>
+                          <ul className="space-y-6 mt-5">
+                            {servicesData.advisory.smallBusiness.map((item) => (
+                              <li key={item.name}>
+                                <Link
+                                  href={item.href}
+                                  className="group/megaMenu w-fit text-black hover:text-primary relative transition-colors duration-300 block"
+                                >
+                                  {item.name}
+                                  <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     </div>
 
-                    <div className="mt-120 grid grid-cols-2 gap-10">
-                      <div>
-                        <h4 className="bg-white px-5 py-1">M&A:</h4>
-                        <ul className="space-y-6 mt-10 flex flex-col">
-                          <Link
-                            href={"privet-company-investment"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Privet Company Investment
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href={"strategic-teaser"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Strategic Teaser
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href={"independent-value"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Independent Value
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                        </ul>
-                      </div>
-                      <div>
-                        <ul className="space-y-6 flex flex-col">
-                          <Link
-                            href={"market-intelligence"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Market Intelligence
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                          <Link
-                            href={"independent-value"}
-                            className="group/megaMenu w-fit text-black hover:text-primary relative"
-                          >
-                            Independent Value
-                            <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
-                          </Link>
-                        </ul>
-                      </div>
+                    {/* M&A */}
+                    <div className="mt-12">
+                      <h4 className="bg-white px-5 py-2 inline-block rounded mb-6 font-semibold">
+                        M&A:
+                      </h4>
+                      <ul className="space-y-6 ml-4">
+                        {servicesData.ma.map((item) => (
+                          <li key={item.name}>
+                            <Link
+                              href={item.href}
+                              className="group/megaMenu w-fit text-black hover:text-primary relative transition-colors duration-300 block"
+                            >
+                              {item.name}
+                              <span className="absolute left-0 bottom-0 w-7 h-[2px] bg-primary opacity-100 group-hover/megaMenu:w-full transition-all duration-700 ease-in-out"></span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -479,53 +419,205 @@ const Navbar = () => {
             </div>
           </div>
 
-          <div className="hidden md:block">
-            <Link href="/" className="primary-button px-7 py-3">
+          {/* Desktop Get Started Button */}
+          <div className="hidden lg:block">
+            <Link
+              href="/"
+              className="primary-button px-7 py-3 hover:opacity-90 transition-opacity duration-300"
+            >
               Get Started
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={toggleMenu}
-              className="relative p-3 text-gray-600 hover:text-blue-600 focus:outline-none focus:text-blue-600 transition-all duration-300 hover:bg-blue-50 rounded-xl"
-            >
-              <div className="relative">
-                {isMenuOpen ? (
-                  <FaTimes className="h-6 w-6 transform rotate-180 transition-all duration-300" />
-                ) : (
-                  <FaBars className="h-6 w-6 transform rotate-0 transition-all duration-300" />
-                )}
-              </div>
-            </button>
-          </div>
+          <button
+            onClick={toggleMenu}
+            className="lg:hidden relative p-2 text-white hover:text-gray-300 focus:outline-none transition-colors duration-300 z-50"
+            aria-label="Toggle mobile menu"
+            aria-expanded={isMenuOpen}
+          >
+            <div className="relative w-6 h-6">
+              <span
+                className={`absolute block h-0.5 w-6 bg-current transform transition-all duration-300 ${
+                  isMenuOpen ? "rotate-45 top-3" : "top-1"
+                }`}
+              ></span>
+              <span
+                className={`absolute block h-0.5 w-6 bg-current transform transition-all duration-300 ${
+                  isMenuOpen ? "opacity-0" : "top-3"
+                }`}
+              ></span>
+              <span
+                className={`absolute block h-0.5 w-6 bg-current transform transition-all duration-300 ${
+                  isMenuOpen ? "-rotate-45 top-3" : "top-5"
+                }`}
+              ></span>
+            </div>
+          </button>
         </div>
+
+        {/* Mobile Menu Overlay */}
+        {isMenuOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 z-30 lg:hidden"
+            onClick={closeMenu}
+          ></div>
+        )}
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden transition-all duration-500 ease-in-out ${
-            isMenuOpen
-              ? "max-h-96 opacity-100 transform translate-y-0"
-              : "max-h-0 opacity-0 transform -translate-y-4"
-          } overflow-hidden`}
+          className={`lg:hidden fixed top-0 right-0 h-full w-80 bg-white z-40 transform transition-transform duration-300 ease-in-out ${
+            isMenuOpen ? "translate-x-0" : "translate-x-full"
+          } overflow-y-auto`}
         >
-          <div className="px-2 pt-2 pb-6 space-y-6 bg-white/95 backdrop-blur-lg rounded-2xl shadow-2xl border border-gray-200/30 mt-4">
-            {menuItems.map((item, index) => (
+          <div className="p-6 pt-20">
+            {/* Mobile Menu Items */}
+            <div className="space-y-1">
+              {menuItems.map((item) => (
+                <div key={item.name}>
+                  {item.submenu ? (
+                    <div>
+                      <button
+                        onClick={() => toggleSubmenu(item.name)}
+                        className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-semibold transition-all duration-300"
+                      >
+                        {item.name}
+                        <FaChevronDown
+                          className={`text-sm transform transition-transform duration-300 ${
+                            activeSubmenu === item.name ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                      <div
+                        className={`overflow-hidden transition-all duration-300 ${
+                          activeSubmenu === item.name
+                            ? "max-h-96 opacity-100"
+                            : "max-h-0 opacity-0"
+                        }`}
+                      >
+                        <div className="pl-4 py-2 space-y-1">
+                          {item.submenu.map((sub) => (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              className="block px-4 py-2 text-sm text-gray-600 hover:text-primary hover:bg-gray-50 rounded-lg transition-colors duration-200"
+                              onClick={closeMenu}
+                            >
+                              {sub.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="block px-4 py-3 text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-semibold transition-all duration-300"
+                      onClick={closeMenu}
+                    >
+                      {item.name}
+                    </Link>
+                  )}
+                </div>
+              ))}
+
+              {/* Mobile Services Menu */}
+              <div>
+                <button
+                  onClick={() => toggleSubmenu("SERVICES")}
+                  className="flex items-center justify-between w-full px-4 py-3 text-left text-gray-700 hover:text-primary hover:bg-gray-50 rounded-lg font-semibold transition-all duration-300"
+                >
+                  SERVICES
+                  <FaChevronDown
+                    className={`text-sm transform transition-transform duration-300 ${
+                      activeSubmenu === "SERVICES" ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                <div
+                  className={`overflow-hidden transition-all duration-300 ${
+                    activeSubmenu === "SERVICES"
+                      ? "max-h-[600px] opacity-100"
+                      : "max-h-0 opacity-0"
+                  }`}
+                >
+                  <div className="pl-4 py-2 space-y-4">
+                    {/* Canada Immigration Mobile */}
+                    <div>
+                      <h5 className="font-semibold text-gray-800 mb-2">
+                        Canada Immigration
+                      </h5>
+                      <div className="space-y-1 pl-2">
+                        {servicesData.canadaImmigration
+                          .slice(0, 3)
+                          .map((category) =>
+                            category.items.slice(0, 2).map((item) => (
+                              <Link
+                                key={item.name}
+                                href={item.href}
+                                className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
+                                onClick={closeMenu}
+                              >
+                                {item.name}
+                              </Link>
+                            ))
+                          )}
+                      </div>
+                    </div>
+
+                    {/* USA Immigration Mobile */}
+                    <div>
+                      <h5 className="font-semibold text-gray-800 mb-2">
+                        USA Immigration
+                      </h5>
+                      <div className="space-y-1 pl-2">
+                        {servicesData.usaImmigration.slice(0, 3).map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
+                            onClick={closeMenu}
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Advisory Mobile */}
+                    <div>
+                      <h5 className="font-semibold text-gray-800 mb-2">
+                        Advisory
+                      </h5>
+                      <div className="space-y-1 pl-2">
+                        {servicesData.advisory.startUp
+                          .slice(0, 3)
+                          .map((item) => (
+                            <Link
+                              key={item.name}
+                              href={item.href}
+                              className="block px-3 py-1 text-sm text-gray-600 hover:text-primary transition-colors duration-200"
+                              onClick={closeMenu}
+                            >
+                              {item.name}
+                            </Link>
+                          ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile Get Started Button */}
+            <div className="mt-8 pt-6 border-t border-gray-200">
               <Link
-                key={item.name}
-                href={item.href}
-                className="block px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50/60 rounded-xl font-semibold transition-all duration-300 transform hover:translate-x-2"
-                onClick={() => setIsMenuOpen(false)}
-                style={{ animationDelay: `${index * 100}ms` }}
+                href="/"
+                className="block w-full text-center primary-button px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                onClick={closeMenu}
               >
-                {item.name}
-              </Link>
-            ))}
-            <div className="pt-4 px-4">
-              <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                 Get Started
-              </button>
+              </Link>
             </div>
           </div>
         </div>
