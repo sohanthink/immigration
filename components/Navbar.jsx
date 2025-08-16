@@ -326,7 +326,7 @@ const Navbar = () => {
                                 </ul>
                               </div>
                             </div>
-                          )
+                          ),
                         )}
                       </div>
                     </div>
@@ -560,7 +560,7 @@ const Navbar = () => {
                               >
                                 {item.name}
                               </Link>
-                            ))
+                            )),
                           )}
                       </div>
                     </div>

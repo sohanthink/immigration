@@ -36,7 +36,10 @@ const PartnerProgram = () => {
             subClassName={"text-white"}
           />
           <p className="text-white mt-6 mb-10">{demoData.description}</p>
-          <Link href={demoData.buttonLink} className="primary-button w-fit max-sm:mx-auto">
+          <Link
+            href={demoData.buttonLink}
+            className="primary-button w-fit max-sm:mx-auto"
+          >
             {demoData.buttonText}
           </Link>
         </div>

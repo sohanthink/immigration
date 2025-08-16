@@ -53,9 +53,7 @@ const BlogCard = ({
               </span>
             )}
           </p>
-          <h4 className="text-white group-hover:text-black">
-            {title}
-          </h4>
+          <h4 className="text-white group-hover:text-black">{title}</h4>
         </div>
       </div>
     </Link>

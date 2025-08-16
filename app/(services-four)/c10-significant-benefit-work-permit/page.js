@@ -60,8 +60,7 @@ export default function C10SignificantBenefitWorkPermit() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current:
-            "C10 Significant Benefit Work Permit",
+          current: "C10 Significant Benefit Work Permit",
         }}
       />
       <ServiceSection {...demoData} />
