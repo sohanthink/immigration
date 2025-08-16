@@ -58,7 +58,7 @@ export default function NpImmigrationStream() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "Business Plan for New Brunswick's Immigration Stream",
+          current: "New Brunswick's Immigration Stream",
         }}
       />
       <ServiceSection {...demoData} />

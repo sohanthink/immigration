@@ -55,7 +55,7 @@ export default function YukonEntrepreneurStream() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "YBNP Entrepreneur Stream – Business Plan Overview",
+          current: "YBNP Entrepreneur Stream",
         }}
       />
       <ServiceSection {...demoData} />

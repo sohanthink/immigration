@@ -58,7 +58,7 @@ export default function C11EntrepreneurWorkPermit() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "C11 Entrepreneur Work Permit Business Plan",
+          current: "C11 Entrepreneur Work Permit",
         }}
       />
       <ServiceSection {...demoData} />

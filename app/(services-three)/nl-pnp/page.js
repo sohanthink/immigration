@@ -54,7 +54,7 @@ export default function NlPnp() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "Business Plan for Newfoundland and Labrador PNP",
+          current: "Newfoundland and Labrador PNP",
         }}
       />
       <ServiceSection {...demoData} />

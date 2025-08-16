@@ -57,7 +57,7 @@ export default function NsnpBusinessPlan() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "Nova Scotia Nominee Program (NSNP) Business Plan",
+          current: "Nova Scotia Nominee Program (NSNP)",
         }}
       />
       <ServiceSection {...demoData} />

@@ -61,7 +61,7 @@ export default function C10SignificantBenefitWorkPermit() {
         breadcrumb={{
           homeLabel: "Home",
           current:
-            "C10 Significant Benefit Work Permit Business Plan – LMIA-Exempt (IMP)",
+            "C10 Significant Benefit Work Permit",
         }}
       />
       <ServiceSection {...demoData} />

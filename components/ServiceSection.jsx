@@ -28,11 +28,11 @@ const ServiceSection = ({
         alt="bg image"
         className="absolute inset-0 mx-auto"
       />
-      <div className="container mx-auto py-120 px-2 relative z-10">
+      <div className="container mx-auto xl:py-120 py-16 px-2 relative z-10">
         {/* Top section */}
-        <div className="flex gap-16 items-start">
-          <div className="w-3/5">
-            <h2 className="mb-16">{title}</h2>
+        <div className="flex xl:gap-16 gap-10 items-start max-sm:flex-col-reverse">
+          <div className="sm:w-3/5">
+            <h2 className="xl:mb-16 mb-10">{title}</h2>
             {description.map((para, idx) => (
               <div
                 key={idx}
@@ -42,19 +42,19 @@ const ServiceSection = ({
               </div>
             ))}
           </div>
-          <div className="w-2/5">
+          <div className="sm:w-2/5 w-full">
             <Image src={image} alt="Business Concept" className="w-full" />
           </div>
         </div>
 
         {/* Bottom section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 xl:mt-120 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:gap-8 gap-4 xl:mt-120 mt-16">
           {/* Pricing */}
           <Card className={"border-blue"}>
             <h3>{cardHeadingOne}</h3>
             <h4 className="text-primary mt-6 mb-8">{startingPrice}</h4>
             <h4>{subTitle}</h4>
-            <p className="text-gray bg-[#F6F6F6] w-fit mt-4 px-6 py-2">
+            <p className="text-gray bg-[#F6F6F6] w-fit mt-4 px-6 py-2 max-sm:text-sm">
               {deliveryTime}
             </p>
             {rushAvailable ? (
@@ -96,7 +96,10 @@ const ServiceSection = ({
             <h3>{cardHeadingTwo}</h3>
             <ul className="space-y-8 mt-6">
               {included.map((item, idx) => (
-                <li key={idx} className="flex items-center gap-2 text-gray">
+                <li
+                  key={idx}
+                  className="flex items-center gap-2 text-gray max-lg:text-sm"
+                >
                   <div>
                     <IoCheckmarkCircle className="text-blue text-lg" />
                   </div>

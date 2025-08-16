@@ -55,7 +55,7 @@ export default function FtaBasedEntrepreneurial() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "FTA-Based Entrepreneurial Business Plan",
+          current: "FTA-Based Entrepreneurial",
         }}
       />
       <ServiceSection {...demoData} />

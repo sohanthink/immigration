@@ -60,7 +60,7 @@ export default function ConceptMpnpEntrepreneurPathway() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "Business Concept for Manitoba’s Entrepreneur Pathway",
+          current: "Manitoba’s Entrepreneur Pathway",
         }}
       />
       <ServiceSection {...demoData} />

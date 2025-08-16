@@ -54,8 +54,7 @@ export default function NwtNomineeProgram() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current:
-            "Business Plan for the Northwest Territories Nominee Program",
+          current: "Northwest Territories Nominee Program",
         }}
       />
       <ServiceSection {...demoData} />

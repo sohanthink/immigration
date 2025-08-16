@@ -29,14 +29,14 @@ const PartnerProgram = () => {
       {/* Right content */}
       <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto px-2">
         <div></div>
-        <div className=" text-white flex flex-col justify-center px-8 py-12 relative z-10">
+        <div className=" text-white flex flex-col justify-center xl:px-8 px-2 sm:px-4 py-6 xl:py-12 relative z-10">
           <SectionHeading
             title={demoData.title}
             subTitle={demoData.tag}
             subClassName={"text-white"}
           />
           <p className="text-white mt-6 mb-10">{demoData.description}</p>
-          <Link href={demoData.buttonLink} className="primary-button w-fit">
+          <Link href={demoData.buttonLink} className="primary-button w-fit max-sm:mx-auto">
             {demoData.buttonText}
           </Link>
         </div>

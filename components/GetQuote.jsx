@@ -6,7 +6,7 @@ const GetQuote = () => {
   return (
     <section className="xl:py-24 py-16">
       <div className="w-full flex items-center justify-center px-4 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:gap-16 gap-10 w-full container mx-auto">
           <div>
             <SectionHeading
               title={"Selection Business Idea"}
@@ -20,7 +20,7 @@ const GetQuote = () => {
               />
               {/* Radial gradient background */}
               <div
-                className="absolute top-1/2 left-1/2 w-96 h-96 -translate-x-2/3 -translate-y-5 z-0"
+                className="absolute top-1/2 left-1/2 xl:w-96 xl:h-96 sm:w-72 sm:h-72 w-60 h-60 -translate-x-2/3 -translate-y-5 z-0"
                 style={{
                   background:
                     "radial-gradient(circle, rgba(255,0,0,0.6) 0%, rgba(255,0,0,0) 70%)",
@@ -138,9 +138,11 @@ const GetQuote = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="primary-button px-10 py-3">
-                Get a Quote
-              </button>
+              <div className="flex justify-center">
+                <button type="submit" className="primary-button px-10 py-3">
+                  Get a Quote
+                </button>
+              </div>
             </form>
           </div>
         </div>

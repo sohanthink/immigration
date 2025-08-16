@@ -55,7 +55,7 @@ export default function LmiaOwnerOperator() {
         }
         breadcrumb={{
           homeLabel: "Home",
-          current: "LMIA Owner-Operator Stream: Business Plan Overview",
+          current: "LMIA Owner-Operator Stream",
         }}
       />
       <ServiceSection {...demoData} />
