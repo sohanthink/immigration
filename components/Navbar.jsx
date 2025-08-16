@@ -299,16 +299,16 @@ const Navbar = () => {
                               key={index}
                               className="group/category relative w-fit"
                             >
-                              <div className="flex items-center gap-2 cursor-pointer">
-                                <h5 className="font-semibold text-gray-800 text-lg group-hover/category:text-primary transition-colors duration-300">
+                              <ul className="flex items-center gap-2 cursor-pointer">
+                                <li className="group-hover/category:text-primary transition-colors duration-300">
                                   {category.title}
-                                </h5>
+                                </li>
                                 <GoChevronRight className="text-sm transform group-hover/category:rotate-90 transition-transform duration-300" />
-                              </div>
+                              </ul>
 
                               {/* Hover menu */}
                               <div className="absolute left-full top-0 w-96 bg-white shadow-xl border border-gray-200 rounded-lg p-4 opacity-0 invisible group-hover/category:opacity-100 group-hover/category:visible transition-all duration-300 z-50">
-                                <h6 className="font-semibold text-primary mb-3 text-base border-b border-gray-100 pb-2">
+                                <h6 className="text-primary mb-3 text-base border-b border-gray-100 pb-2">
                                   {category.title}
                                 </h6>
                                 <ul className="space-y-2">
@@ -326,7 +326,7 @@ const Navbar = () => {
                                 </ul>
                               </div>
                             </div>
-                          ),
+                          )
                         )}
                       </div>
                     </div>
@@ -544,9 +544,7 @@ const Navbar = () => {
                   <div className="pl-4 py-2 space-y-4">
                     {/* Canada Immigration Mobile */}
                     <div>
-                      <h5 className="font-semibold text-gray-800 mb-2">
-                        Canada Immigration
-                      </h5>
+                      <h5 className="text-black mb-2">Canada Immigration</h5>
                       <div className="space-y-1 pl-2">
                         {servicesData.canadaImmigration
                           .slice(0, 3)
@@ -560,16 +558,14 @@ const Navbar = () => {
                               >
                                 {item.name}
                               </Link>
-                            )),
+                            ))
                           )}
                       </div>
                     </div>
 
                     {/* USA Immigration Mobile */}
                     <div>
-                      <h5 className="font-semibold text-gray-800 mb-2">
-                        USA Immigration
-                      </h5>
+                      <h5 className="text-black mb-2">USA Immigration</h5>
                       <div className="space-y-1 pl-2">
                         {servicesData.usaImmigration.slice(0, 3).map((item) => (
                           <Link
@@ -586,9 +582,7 @@ const Navbar = () => {
 
                     {/* Advisory Mobile */}
                     <div>
-                      <h5 className="font-semibold text-gray-800 mb-2">
-                        Advisory
-                      </h5>
+                      <h5 className="text-black mb-2">Advisory</h5>
                       <div className="space-y-1 pl-2">
                         {servicesData.advisory.startUp
                           .slice(0, 3)
