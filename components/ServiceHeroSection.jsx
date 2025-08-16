@@ -34,14 +34,14 @@ const ServiceHeroSection = ({
           <div>
             <h1 className="max-w-7xl lg:!text-7xl mx-auto">{title}</h1>
             {subtitle && <p className="max-w-4xl mx-auto mt-7">{subtitle}</p>}
-            <button className="px-10 py-4 bg-white text-black font-medium mt-10">
+            <button className="xl:px-10 md:px-6 px-4 xl:py-4 py-2 bg-white text-black font-medium mt-10">
               Get A Quote
             </button>
           </div>
         </div>
       </div>
-      <div className="container mx-auto absolute z-20 bottom-12 px-2 xl:px-20 2xl:px-2">
-        <p className="flex justify-start gap-2 relative">
+      <div className="container mx-auto absolute z-20 bottom-12 px-2 xl:px-20 2xl:px-2 hidden xl:block">
+        <p className="flex justify-start items-center gap-2 relative">
           <Link
             href="/"
             className="text-primary flex items-center gap-2 max-sm:text-xs"

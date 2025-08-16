@@ -14,7 +14,7 @@ const WhyChooseUs = () => {
           src={mapBg}
           alt="map background"
           fill
-          className="bg-center"
+          className="bg-center max-md:object-cover"
           quality={100}
         />
       </div>
@@ -57,8 +57,8 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Stats section */}
-      <div className="relative z-10 container mx-auto px-2 xl:flex items-center justify-between max-lg:text-center">
-        <div className="xl:border-l border-gray xl:pl-9">
+      <div className="relative z-10 container mx-auto px-8 grid grid-cols-2 lg:grid-cols-4 items-center justify-center max-lg:text-center">
+        <div className="">
           <h2>40 000+</h2>
           <p className="text-gray mt-3">Business Plans</p>
         </div>

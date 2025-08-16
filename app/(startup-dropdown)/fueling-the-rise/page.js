@@ -42,21 +42,21 @@ export default function FuelingTheRise() {
           alt="bg image"
           className="absolute inset-0 mx-auto"
         />
-        <div className="container mx-auto py-120 px-2 relative z-10">
+        <div className="container mx-auto xl:py-120 py-16 px-2 relative z-10">
           {/* Top section */}
-          <div className="flex gap-16 items-start">
-            <div className="w-3/5">
-              <h2 className="mb-16">{demoData.title}</h2>
+          <div className="flex xl:gap-16 gap-10 items-start max-sm:flex-col-reverse">
+            <div className="sm:w-3/5 w-full">
+              <h2 className="xl:mb-16 mb-10">{demoData.title}</h2>
               {demoData.description.map((para, idx) => (
                 <div
                   key={idx}
-                  className="mb-6 text-sm leading-[24px] sm:text-base sm:leading-[28px] lg:leading-[30px]"
+                  className="text-[#797979] mb-6 text-sm leading-[24px] sm:text-base sm:leading-[28px] lg:leading-[30px]"
                 >
                   {para}
                 </div>
               ))}
             </div>
-            <div className="w-2/5">
+            <div className="sm:w-2/5 w-full">
               <Image
                 src={demoData.image}
                 alt="Business Concept"
