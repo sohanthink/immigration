@@ -9,7 +9,7 @@ const TeamMemberCard = ({ member }) => {
   return (
     <div className="group relative">
       {/* Image Container */}
-      <Link href={`/jhon-mirkwood`}>
+      <Link href={`/teams/${member.slug}`}>
         <div className="relative overflow-hidden">
           <Image
             width={300}
