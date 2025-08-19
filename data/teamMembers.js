@@ -62,7 +62,7 @@ export const getMemberBySlug = (slug) => {
 // Helper function to get next/previous members
 export const getAdjacentMembers = (currentSlug) => {
   const currentIndex = teamMembers.findIndex(
-    (member) => member.slug === currentSlug
+    (member) => member.slug === currentSlug,
   );
 
   const previousMember =

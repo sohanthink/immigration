@@ -326,7 +326,7 @@ const Navbar = () => {
                                 </ul>
                               </div>
                             </div>
-                          )
+                          ),
                         )}
                       </div>
                     </div>
@@ -358,7 +358,7 @@ const Navbar = () => {
                       <h4 className="bg-white px-5 py-2 inline-block rounded mb-6 font-semibold">
                         Advisory:
                       </h4>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ml-4">
                         <div>
                           <h4>Start Up</h4>
                           <ul className="space-y-6 mt-5">
@@ -558,7 +558,7 @@ const Navbar = () => {
                               >
                                 {item.name}
                               </Link>
-                            ))
+                            )),
                           )}
                       </div>
                     </div>
