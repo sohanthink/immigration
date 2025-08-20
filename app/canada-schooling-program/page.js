@@ -141,12 +141,12 @@ export default function CanadaSchoolingProgram() {
     <>
       <section className="lg:min-h-[60vh] sm:min-h-[50vh] min-h-[40vh] sm:p-10 p-5 flex items-center justify-center text-white overflow-hidden bg-gradient-to-r from-[#8AB2C81A] to-[#BADDEF94]">
         <div className="container mx-auto px-4 relative">
-          <div className="absolute top-1/2 left-2 transform translate-y-1/2">
+          <div className="absolute top-1/2 left-2 transform translate-y-1/2 hidden lg:block">
             <Image src={image1} alt="icon" width={100} height={100} />
           </div>
-          <div className="flex items-center justify-center w-4/5 mx-auto gap-8">
-            <div className="w-3/5">
-              <h1 className="text-black !text-[64px]">
+          <div className="flex items-center justify-center w-full lg:w-4/5 mx-auto gap-8">
+            <div className="lg:w-3/5">
+              <h1 className="text-black text-4xl font-extrabold leading-[44px] sm:text-5xl sm:leading-[56px] lg:text-[64px] lg:leading-[95px]">
                 Canada Elementary School
               </h1>
               <h5 className="flex mt-8 items-center gap-2 relative">
@@ -161,23 +161,23 @@ export default function CanadaSchoolingProgram() {
                 </Link>
 
                 <span className="text-gray-2">/</span>
-                <span className="max-sm:text-xs text-gray-2">
+                <span className="max-sm:text-xs text-gray-2 text-nowrap">
                   Canada Schooling Program
                 </span>
               </h5>
             </div>
-            <div className="w-2/5">
+            <div className="w-2/5 hidden lg:block">
               <Image src={image2} alt="icon" />
             </div>
           </div>
-          <div className="absolute top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
+          <div className="absolute hidden lg:block top-1/2 right-2 transform -translate-x-1/2 -translate-y-1/2">
             <Image src={image3} alt="icon" />
           </div>
         </div>
       </section>
 
-      <section>
-        <div className="container mx-auto px-2 py-120">
+      <section className="xl:py-120 py-16">
+        <div className="container mx-auto px-2">
           {/* Heading */}
           <h2>Understanding the Canadian Schooling Program (K–12)</h2>
           <h4 className="my-10">
@@ -275,7 +275,7 @@ export default function CanadaSchoolingProgram() {
           </div>
 
           {/* Grid Table */}
-          <div className="mt-14 grid grid-cols-[repeat(21,_minmax(0,_1fr))] gap-5 font-medium">
+          <div className="mt-14 grid xl:grid-cols-[repeat(21,_minmax(0,_1fr))] sm:grid-cols-12 grid-cols-6 gap-5 font-medium">
             <div className="col-span-3 text-white">
               <div className="grid grid-cols-3 grid-rows-6 gap-2 text-center">
                 <div className="bg-[#7A64C7] flex items-center justify-center p-5">
@@ -312,7 +312,9 @@ export default function CanadaSchoolingProgram() {
                   ))}
                 </div>
                 <div className="col-span-full row-span-2 flex flex-col items-center justify-center">
-                  <h4 className="text-black">Primary Education</h4>
+                  <h5 className="text-black !font-semibold">
+                    Primary Education
+                  </h5>
                   <p className="text-gray-2">(9 - 12 Subjects)</p>
                 </div>
                 <div className="col-span-full row-span-1"></div>
@@ -356,11 +358,13 @@ export default function CanadaSchoolingProgram() {
                 </div>
                 <div className="col-span-full grid grid-cols-6 gap-5 row-span-2">
                   <div className="col-span-2 flex flex-col items-center justify-center">
-                    <h4 className="text-black">Junior Heigh School</h4>
+                    <h5 className="text-black !font-semibold">
+                      Junior Heigh School
+                    </h5>
                     <p className="text-gray-2">(6 - 9 Subjects)</p>
                   </div>
                   <div className="col-span-4 flex flex-col items-center justify-center">
-                    <h4 className="text-black">Heigh School</h4>
+                    <h5 className="text-black !font-semibold">Heigh School</h5>
                     <p className="text-gray-2">(9 - 12 Subjects)</p>
                   </div>
                 </div>
@@ -411,14 +415,14 @@ export default function CanadaSchoolingProgram() {
                 </div>
                 <div className="col-span-full grid grid-cols-6 gap-5 row-span-3">
                   <div className="col-span-2 flex items-center justify-center">
-                    <h4 className="text-black -rotate-90 max-w-[180px]">
+                    <h5 className="text-black !font-semibold -rotate-90 max-w-[180px]">
                       Pre - University Program
-                    </h4>
+                    </h5>
                   </div>
                   <div className="col-span-4 flex items-center justify-center">
-                    <h4 className="text-black -rotate-90 max-w-[180px]">
+                    <h5 className="text-black !font-semibold -rotate-90 max-w-[180px]">
                       Professional University Program
-                    </h4>
+                    </h5>
                   </div>
                 </div>
                 <h5 className="bg-[#7A64C7] col-span-full row-span-1 font-semibold flex items-center justify-center">
@@ -432,22 +436,26 @@ export default function CanadaSchoolingProgram() {
 
       <section>
         <div>
-          <Image alt="banner" src={image4} className="w-full" />
+          <Image
+            alt="banner"
+            src={image4}
+            className="w-full h-full object-cover"
+          />
         </div>
-        <div className="container mx-auto px-2 relative">
-          <div className="absolute bottom-20 left-0 transform">
+        <div className="container mx-auto px-2 relative z-20">
+          <div className="absolute xl:bottom-20 bottom-10 transform">
             <h2 className="text-white">Types of Schools</h2>
-            <p className="text-[#C3C3C3] mt-8">
+            <p className="text-[#C3C3C3] xl:mt-6 md:mt-3">
               There are typically two types of elementary School in Canada:
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-120">
+      <section className="xl:py-120 py-16">
         <div className="container mx-auto px-2">
           <h2>{demoData.heading}</h2>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-7">
+          <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-7">
             {demoData.description.map((para, idx) => (
               <p
                 key={idx}
@@ -471,7 +479,7 @@ export default function CanadaSchoolingProgram() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-12 mb-8">
+            <div className="grid md:grid-cols-2 grid-cols-1 xl:gap-12 gap-6 mb-8">
               <div className="space-y-6">
                 <div>
                   <h4>📚 Excellence in Teaching</h4>
@@ -560,7 +568,7 @@ export default function CanadaSchoolingProgram() {
             </div>
 
             {/* Tuition and Enrollment Section */}
-            <div className="mt-16">
+            <div className="xl:mt-16 mt-10">
               <h4>Tuition and Enrollment Overview</h4>
 
               <div className="mt-3 text-gray">
@@ -603,11 +611,11 @@ export default function CanadaSchoolingProgram() {
         </div>
       </section>
 
-      <section className="py-120 bg-gradient-to-b from-[#DAEBF3] to-[#F3F7F9]">
+      <section className="xl:py-120 py-16 bg-gradient-to-b from-[#DAEBF3] to-[#F3F7F9]">
         <div>
           <div className="container mx-auto px-2">
             {/* Header */}
-            <div className="grid grid-cols-2 mb-10 gap-20">
+            <div className="grid lg:grid-cols-2 mb-10 xl:gap-20 gap-10">
               <h2>School Application Process in Canada</h2>
 
               <p className="text-gray">
@@ -665,7 +673,7 @@ export default function CanadaSchoolingProgram() {
               </p>
             </div>
 
-            <h5 className="mt-20">
+            <h5 className="xl:mt-20 mt-10">
               At Immigration, our expert team is here to support your journey
               every step of the way—from counselling and applications to visa
               assistance, enrollment, and housing arrangements. We make your
@@ -675,9 +683,9 @@ export default function CanadaSchoolingProgram() {
         </div>
       </section>
 
-      <section className="py-120">
+      <section className="xl:py-120 py-16">
         <div>
-          <div className="container mx-auto px-2 grid grid-cols-2 gap-120">
+          <div className="container mx-auto px-2 grid lg:grid-cols-2 grid-cols-1 gap-10 xl:gap-120">
             <div>
               <Image
                 src={image6}
@@ -688,7 +696,7 @@ export default function CanadaSchoolingProgram() {
               />
             </div>
             <div>
-              <h2 className="mb-16">Why Choose Immigration</h2>
+              <h2 className="xl:mb-16 mb-10">Why Choose Immigration</h2>
               <p className="text-gray">
                 At Scholars Zone, we understand the deep importance of securing
                 an exceptional future for your child. That’s why we're proud to
@@ -719,31 +727,31 @@ export default function CanadaSchoolingProgram() {
 
       <section>
         <div className="container mx-auto px-2">
-          <h2 className="w-4/5">
+          <h2 className="lg:w-4/5">
             Approximate Cost of Elementary School in Canada for Bangladeshi
             Students
           </h2>
 
-          <div className="overflow-x-auto mt-16">
-            <table className="w-full border-collapse">
+          <div className="overflow-x-auto xl:mt-16 mt-10">
+            <table className="min-w-full border-collapse">
               <thead>
                 <tr>
-                  <th className="bg-[#C9E0FF] p-5 text-left font-medium">
+                  <th className="bg-[#C9E0FF] p-5 text-left text-sm lg:text-base lg:font-medium">
                     Province
                   </th>
-                  <th className="bg-[#C9E0FF] p-5 text-left font-medium border-x border-white">
+                  <th className="bg-[#C9E0FF] p-5 text-left text-sm lg:text-base lg:font-medium border-x text-nowrap border-white">
                     School Name
                   </th>
-                  <th className="bg-[#C9E0FF] p-5 text-left font-medium">
+                  <th className="bg-[#C9E0FF] p-5 text-left text-sm lg:text-base lg:font-medium">
                     Kindergarten
                   </th>
-                  <th className="bg-[#C9E0FF] p-5 text-left font-medium border-x border-white">
+                  <th className="bg-[#C9E0FF] p-5 text-left text-sm lg:text-base lg:font-medium border-x border-white text-nowrap">
                     Grade 1 - 6
                   </th>
-                  <th className="bg-[#C9E0FF] p-5 text-left font-medium  border-r border-white">
+                  <th className="bg-[#C9E0FF] p-5 text-left text-sm lg:text-base lg:font-medium border-r text-nowrap border-white">
                     Grade 7 - 9
                   </th>
-                  <th className="bg-[#C9E0FF] p-5 text-left font-medium">
+                  <th className="bg-[#C9E0FF] p-5 text-left text-sm lg:text-base lg:font-medium text-nowrap">
                     Grade 10 - 12
                   </th>
                 </tr>
@@ -773,34 +781,34 @@ export default function CanadaSchoolingProgram() {
                     <tr key={`${provinceIndex}-${schoolIndex}`}>
                       {schoolIndex === 0 ? (
                         <td
-                          className={`${provinceColors[provinceIndex]} px-4 py-3 font-medium text-center align-middle`}
+                          className={`${provinceColors[provinceIndex]} px-4 py-3 text-sm lg:text-base lg:font-medium text-center align-middle`}
                           rowSpan={provinceData.schools.length}
                         >
                           {provinceData.province}
                         </td>
                       ) : null}
                       <td
-                        className={`${schoolColors[provinceIndex]} border border-gray-300 px-4 py-3 text-gray`}
+                        className={`${schoolColors[provinceIndex]} border-t text-sm lg:text-base border-gray-300 px-4 py-3 text-gray`}
                       >
                         {school.name}
                       </td>
                       <td
-                        className={`${gradeColors[provinceIndex]} border-x border-gray-300 px-4 py-3 text-center text-gray`}
+                        className={`${gradeColors[provinceIndex]} border-x text-sm lg:text-base border-gray-300 px-4 py-3 text-center text-gray`}
                       >
                         {school.kindergarten}
                       </td>
                       <td
-                        className={`${gradeColors[provinceIndex]} border-x border-gray-300 px-4 py-3 text-center text-gray`}
+                        className={`${gradeColors[provinceIndex]} border-x text-sm lg:text-base border-gray-300 px-4 py-3 text-center text-gray`}
                       >
                         {school.grade1_6}
                       </td>
                       <td
-                        className={`${gradeColors[provinceIndex]} border-x border-gray-300 px-4 py-3 text-center text-gray`}
+                        className={`${gradeColors[provinceIndex]} border-x text-sm lg:text-base border-gray-300 px-4 py-3 text-center text-gray`}
                       >
                         {school.grade7_9}
                       </td>
                       <td
-                        className={`${gradeColors[provinceIndex]} border-x border-gray-300 px-4 py-3 text-center text-gray`}
+                        className={`${gradeColors[provinceIndex]} border-x text-sm lg:text-base border-gray-300 px-4 py-3 text-center text-gray`}
                       >
                         {school.grade10_12}
                       </td>
@@ -813,7 +821,7 @@ export default function CanadaSchoolingProgram() {
         </div>
       </section>
 
-      <section className="py-120">
+      <section className="xl:py-120 py-16">
         <div>
           <div className="container mx-auto px-2">
             <h2 className="w-4/5">
@@ -935,7 +943,7 @@ export default function CanadaSchoolingProgram() {
               </ul>
             </div>
 
-            <h5 className="mt-20">
+            <h5 className="xl:mt-20 mt-10">
               Final Thought Choosing Canadian elementary education in 2025 means
               investing in your child's long-term success. It’s more than
               schooling—it’s the start of a globally respected journey built on
